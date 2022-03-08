@@ -10,7 +10,11 @@
 | Jordan Lundy     | 30086686 | jordan427-prog |
 
 # Introduction
+This lab explores mutation and GUI testing to familiarize ourselves with the processes involved with these tests. We also get the opportunity to explore testing tools.
 
+Mutation testing is when the SUT is modified in order to assess the quality of test cases and help improve them. We are using `Pitest` on our java code from previous labs to inject faults and learn to interpret mutation scores.
+
+GUI testing is when a GUI is tested through clicks and inputs which cannot be modeled like regular JUnit tests. We will use Selenium to record and replay test cases developed for the Sportcheck page, Walmart page, or Best Buy page. We will also explore and compare the `Sikulix` tool as an alternative.
 # Analysis of 10 Mutants of the Range class 
 
 # Report all the statistics and the mutation score for each test class

@@ -33,7 +33,7 @@ public class RangeCombineIgnoringNaN {
         Range param2 = new Range (Double.NaN, 3);
         Range result = Range.combineIgnoringNaN (param1, param2);
         Range comp = new Range (1,3);
-        assertEquals (null, result);
+        assertEquals (null, comp);
     }
 
     @Test

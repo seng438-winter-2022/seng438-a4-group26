@@ -73,11 +73,16 @@ is no longer thrown, thus the test case fails and the mutant is killed.
 **Mutation:** Negated conditional (line 158) <br />
 **Location:** intersects <br />
 **Killed by:** org.jfree.data.test.intersectsTesting.intersectsNoOverLap <br />
+**Analysis:** The test case intersectsNoOverlap asserts that the call to intersects is false, since the Range of one was (-5,-2)
+and the other range tested was (3,8). Obviously, these two ranges do not overlap and thus the asserfalse should pass without mutation.
+However, the mutation negated the conditional in intersects, so when the intersects() would normally return false, it now returns true.
+Thus, the test case will now fail and thus the mutation is killed.
 
 ## Mutant #7
-**Mutation:** Substituted 0 with 1 -> Killed (line 158) <br />
-**Location:** intersects <br />
-**Killed by:** org.jfree.data.test.intersectsTesting.intersectsNoOverLap <br />
+**Mutation:** Replaced double subtraction with addition → KILLED (line 123) <br />
+**Location:** getLength <br />
+**Killed by:** org.jfree.data.test.RangeGetLengthTest.testBothNegative <br />
+**Analysis:** 
 
 # Report all the statistics and the mutation score for each test class
 

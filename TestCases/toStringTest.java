@@ -29,7 +29,7 @@ public class toStringTest
 	public void invalidLower()
 	{
 		y=new Range('a',99.0);
-		String comp2="Range[a,99.0]";
+		String comp2="Range[97.0,99.0]";
 		String comp3=y.toString();
 		assertEquals(comp2,comp3);
 	}
@@ -37,7 +37,7 @@ public class toStringTest
 	public void invalidUpper()
 	{
 		y=new Range(0,'a');
-		String comp4="Range[0,a]";
+		String comp4="Range[0.0,97.0]";
 		String comp5=y.toString();
 		assertEquals(comp4,comp5);
 	}

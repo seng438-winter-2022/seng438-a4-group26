@@ -47,7 +47,7 @@ public class nanTest{
 	{
 		r=new Range ('a','b');
 		Boolean testInvalid=r.isNaNRange();
-		assertEquals(true,testInvalid);
+		assertEquals(false,testInvalid);
 	}
 	
 	@Test (expected =Exception.class)

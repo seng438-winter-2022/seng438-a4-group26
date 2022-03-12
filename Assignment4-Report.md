@@ -82,7 +82,9 @@ Thus, the test case will now fail and thus the mutation is killed.
 **Mutation:** Replaced double subtraction with addition → KILLED (line 123) <br />
 **Location:** getLength <br />
 **Killed by:** org.jfree.data.test.RangeGetLengthTest.testBothNegative <br />
-**Analysis:** 
+**Analysis:** In this mutation, the range boundary length computation is altered from upper-lower to upper+bound. Thus, the test 
+case testBothNegative fails and kills the mutant, as -3.25-(-6.75) becomes -3.25+6.75, and the assert in the test case fails since
+the incorrect length is now computed and returned.
 
 # Report all the statistics and the mutation score for each test class
 

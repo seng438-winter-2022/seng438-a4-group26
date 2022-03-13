@@ -60,9 +60,16 @@ public class TestDataUtilitiesCumulativePercentages {
 		double [] actualValues = new double[3];
 		for(int i=0; i<result.getKeys().size(); i++) {
 			actualValues[i]=(double) result.getValue(result.getKey(i));
-
 		}
-		
+		double [] expectedValues= {0.4536082474226804,0.9639175257731959, 1 };
+		boolean incorrect=false;
+		for(int i=0; i<result.getKeys().size(); i++) {
+			if(actualValues[i]!=expectedValues[i]) {
+				incorrect=true;
+				break;
+			}
+		}
+		assertFalse(incorrect);
 	}
 	
 	

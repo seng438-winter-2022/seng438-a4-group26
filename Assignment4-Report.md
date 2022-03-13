@@ -86,6 +86,14 @@ Thus, the test case will now fail and thus the mutation is killed.
 case testBothNegative fails and kills the mutant, as -3.25-(-6.75) becomes -3.25+6.75, and the assert in the test case fails since
 the incorrect length is now computed and returned.
 
+## Mutant #8
+**Mutation:** replaced return of double value with -(x + 1) for org/jfree/data/Range::getLowerBound → KILLED
+**Location:** getLowerBound <br />
+**Killed by:** org.jfree.data.test.getLowerBoundTest.testNegativeNumber <br />
+**Analysis:** This mutation takes the minimum value for the range, and then chnages it to -(min+1). The mutaton was
+killed, therefore the test case failed. This fails because the assert statement looks for the min value, but instead
+has -(min+1). Therefore, the statement is false, and the assert fails fails, and the mutation is killed. 
+
 # Report all the statistics and the mutation score for each test class
 
 # Analysis drawn on the effectiveness of each of the test classes

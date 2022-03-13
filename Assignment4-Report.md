@@ -102,6 +102,14 @@ has -(min+1). Therefore, the statement is false, and the assert fails fails, and
 means that the test case only ever returned for logical statements resulting in true. Thherefore, test cases where
 the return should be false should be implemented to increase mutation score.
 
+## Mutant #10
+**Mutation:**  Substituted 2.0 with 1.0 → KILLED <br />
+**Location:** getCentralValue <br />
+**Killed by:** org.jfree.data.test.RangeTest.org.jfree.data.test.RangeTest <br />
+**Analysis:** This mutation changes thr division by 2 to division by 1. This will not not give a proper central value, 
+but instead, just add the lower and upper value. This mutation was killed, and so the test case failed. This expects
+a central value, but instead you get a summation of the bounds.
+
 # Report all the statistics and the mutation score for each test class
 
 # Analysis drawn on the effectiveness of each of the test classes

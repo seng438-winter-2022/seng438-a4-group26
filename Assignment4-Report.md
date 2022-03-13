@@ -116,13 +116,18 @@ a central value, but instead you get a summation of the bounds.
 
 ### `DataUtilitesTestEqual`
 originally this test class had a mutation score of 91.17% after improvements to the test suite a new mutation score of 94.12% was attained. This was done by including 3 new test cases, which were:
+
 `testLengthsUnequalButSwitched` - A test changing the order of given arrays
 `testEveryOtherSame` - A test where every other array in a and b was equal
 `testCompletelyDifferent` - A test where no element of any array was equal
+
 This test class was testing the `equal` function in DataUtilites, this function incorporates a loop which means that a mutation of '<' to '!=' in the loop's condition are effectively the same in this implementation causing this mutation to live. Additionally, PITest mutated the line `return true;` to "Substituted 1 with -1" this mutation does not make sense and is a mutation that was not detected by the test case.
 
 ### `TestDataUtilitesCumulativePercentages`
-Originally, this test class had a mutation score of 78.62%, after improving the test class, a new mutation score of 95.34% was attained. This was done by updating `testSequentialList` and `DataUtilities` itself to align with the documentation.
+Originally, this test class had a mutation score of 78.62%, after improving the test class, a new mutation score of 95.34% was attained. This was done by updating 
+
+`testSequentialList` and `DataUtilities` itself to align with the documentation.
+
 The few surviving mutations are either replacements of '<' to '!=' in a array loop or a post increment/decrement of a local variable on a return line. Both of these mutations within the context of the implmentation do not produce any failures, thus the mutations live.
 
 
@@ -130,33 +135,41 @@ The few surviving mutations are either replacements of '<' to '!=' in a array lo
 
 ### `RangeCombineTest`
 Originally, this test class had a mutation score of 78.78%, after improving the test class, a new mutation score of 87.87% was attained. Three test cases were added:
+
 `testLargeR2smallR1` - A test for where R2 is a large range that has negative values and R1 is entirely positive
 `testBothRangesHaveNegativeLowers` - A test where both R1 and R2 have a negative lower bound
 `testBothRangesHaveNegativeUppers` - A test where both ranges are fully negative
+
 This test class failed to detect four mutations out of 33. However these mutations are all post increment/decrement to local variables on return lines. This means that these mutations would have no effect on the correct operation of the function. 
 
 ### `RangeTestExpandToInclude`
 Originally, this test case had a mutation score of 83.58%, after improving the test class, a new mutation score of 85.07% was attained. five test cases were added:
+
 `valueOnLowerBound` - the target value is set to the lower bound of the range
 `valueNegativeNominal` - a non zero negative value is used
 `valueOnUpperBound` - the target value is set to the upper bound of the range
 `valuePositiveNomial` - a non zero positive value is used
 `NaNComparison` - both the range and value have a Double.NaN forcing a comparison of NaN
+
 This test class still fails to detect post increment/decrement of local variables on a return line. Additionally, the implementation of the `expandToInclude` function in `Range` allows for the changes '<' to '=<'and '>' to '>=' without changing expected outcomes. 
 
 ### `RangeTestIntersectsDouble`
 Originally, this test class had a mutation score of 63.20%, after improving the test class, a new mutation score of 89.62% was attained. five test cases were added:
+
 `PointOnLower` - the argument range is a point equal to the lower bound of the calling range
 `PointOnUpper` - the argument range is a point equal to the upper bound of the calling range
 `PointInRange` - the argument range is a point in the calling range
 `lowerUnchanged` - test for verifying that `intersects(double, double)` does not change the lower bound of the calling range
 `upperUnchanged` - test for verifying that `intersects(double, double)` does not change the upper bound of the calling range
+
 The test class still fails to detect mutations where a local variable is post incremented/decremented on a return line and the "Substituted 1 with -1" mutation on return lines.
 
 ### `RangeTestScale`
-Originally, this test class had a mutation score of 76%, after improving the test class, a new mutation score of 96% was attained. Two new test cases were added: 
+Originally, this test class had a mutation score of 76%, after improving the test class, a new mutation score of 96% was attained. Two new test cases were added:
+
 `testScaleByPositiveWhereRangeisLarge` - Scaling a very large range by a value greater than 1
 `testScaleByZero` - Scale a given range by a factor of 0
+
 additionally, testScaleByNegative was modified to better catch mutants. The only mutants not killed by these changes were again mutantations on a post increment/decrement of a local variable on a return line. 
 
 ### `RangeTestShiftDouble`

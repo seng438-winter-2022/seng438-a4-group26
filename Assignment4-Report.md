@@ -94,6 +94,14 @@ the incorrect length is now computed and returned.
 killed, therefore the test case failed. This fails because the assert statement looks for the min value, but instead
 has -(min+1). Therefore, the statement is false, and the assert fails fails, and the mutation is killed. 
 
+## Mutant #9
+**Mutation:** removed conditional - replaced comparison check with true → SURVIVED
+**Location:** intersects <br />
+**Killed by:** none <br />
+**Analysis:** TThis mutation returns true or false depending on if two ranges intersect or not. In this mutation, the lofical return statement was converted simply to true. The mutation survived, which means the test cases passed. This 
+means that the test case only ever returned for logical statements resulting in true. Thherefore, test cases where
+the return should be false should be implemented to increase mutation score.
+
 # Report all the statistics and the mutation score for each test class
 
 # Analysis drawn on the effectiveness of each of the test classes

@@ -95,7 +95,7 @@ killed, therefore the test case failed. This fails because the assert statement 
 has -(min+1). Therefore, the statement is false, and the assert fails fails, and the mutation is killed. 
 
 ## Mutant #9
-**Mutation:** removed conditional - replaced comparison check with true → SURVIVED
+**Mutation:** removed conditional - replaced comparison check with true → SURVIVED <br />
 **Location:** intersects <br />
 **Killed by:** none <br />
 **Analysis:** TThis mutation returns true or false depending on if two ranges intersect or not. In this mutation, the lofical return statement was converted simply to true. The mutation survived, which means the test cases passed. This 

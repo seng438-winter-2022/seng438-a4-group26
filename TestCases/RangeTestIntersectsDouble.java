@@ -50,7 +50,7 @@ public class RangeTestIntersectsDouble {
 	@Test
 	//b1=upper>b0>lower
 	public void testB1EqualsUpperB0GreaterThanLower() {
-		assertTrue(testee.intersects(5,7));
+		assertTrue(testee.intersects(6,7));
 	}
 	@Test
 	//upper>b1>lower=b0
@@ -77,7 +77,7 @@ public class RangeTestIntersectsDouble {
 	@Test
 	//b0>b1
 	public void testB0GreaterThanB1() {
-		assertFalse(testee.intersects(10,4));
+		assertFalse(testee.intersects(5,4));
 	}
 	@Test
 	//b1 is Double.NaN, b0 is valid
@@ -109,5 +109,26 @@ public class RangeTestIntersectsDouble {
 	public void testMaxArgRange() {
 		assertTrue(testee.intersects(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY));
 	}
-
+	@Test
+	public void PointOnLower() {
+		assertFalse(testee.intersects(3,3));
+	}
+	@Test
+	public void lowerUnchanged() {
+		testee.intersects(1,2);
+		assertEquals(3,testee.getLowerBound(),0);
+	}
+	@Test
+	public void upperUnchanged() {
+		testee.intersects(1,2);
+		assertEquals(7,testee.getUpperBound(),0);
+	}
+	@Test
+	public void PointOnUpper() {
+		assertFalse(testee.intersects(7, 7));
+	}
+	@Test
+	public void PointInRange() {
+		assertTrue(testee.intersects(4, 4));
+	}
 }

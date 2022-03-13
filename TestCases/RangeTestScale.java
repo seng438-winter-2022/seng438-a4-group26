@@ -19,17 +19,25 @@ public class RangeTestScale {
 		Range expected = new Range(-4,4);
 		assertEquals(expected, Range.scale(testee, 4));
 	}
-	
 	@Test
-	public void testScaleByNegative() {
-		boolean thrown=false;
-		try{
-			Range.scale(testee, -4);
-		}catch(IllegalArgumentException e) {
-			thrown=true;
-		}
-		assertTrue(thrown);
+	public void testScaleByPositiveWhereRangeisLarge() {
+		Range tester= new Range(2,10);
+		Range expected = new Range(4,20);
+		assertEquals(expected, Range.scale(tester, 2));
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testScaleByNegative() {
+		Range tester = new Range(0,0);
+		Range expected = new Range (0,0);
+		assertEquals(expected, Range.scale(tester, -1));
+	}
+	@Test
+	public void testScaleByZero() {
+		Range expected = new Range (0,0);
+		assertEquals(expected,Range.scale(testee, 0));
+	}
+	
 	@Test
 	public void testNullBase() {
 		boolean thrown = false;
@@ -69,6 +77,12 @@ public class RangeTestScale {
 	public void testScaleByPositiveInf() {
 		Range expected = new Range(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
 		assertEquals(expected, Range.scale(testee, Double.POSITIVE_INFINITY));
+	}
+	@Test
+	public void testNoChangesToScale() {
+		double scale= 2;
+		Range.scale(testee, scale);
+		assertEquals(2,scale,0);
 	}
 
 }

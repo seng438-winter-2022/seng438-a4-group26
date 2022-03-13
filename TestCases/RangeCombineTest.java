@@ -77,5 +77,29 @@ public class RangeCombineTest {
 		Range R2=null;
 		assertNull(Range.combine(R1, R2));
 	}
+	@Test
+	public void testLargeR2smallR1() {
+		Range R1=new Range(16, 18);
+		Range R2=new Range(-2,6);
+		Range expected= new Range(-2,18);
+		Range actual= Range.combine(R1,R2);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testBothRangesHaveNegativeLowers () {
+		Range R1= new Range(-2,7);
+		Range R2= new Range(-1,8);
+		Range expected = new Range(-2,8);
+		Range actual= Range.combine(R1, R2);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void tesstBothRangesHaveNegativeUppers () {
+		Range R1= new Range(-16,-1);
+		Range R2= new Range(-32, -14);
+		Range expected = new Range(-32, -1);
+		Range actual= Range.combine(R1, R2);
+		assertEquals(expected, actual);
+	}
 
 }

@@ -52,4 +52,31 @@ public class RangeTestExpandToInclude {
 		Range expected = new Range(-10,Double.POSITIVE_INFINITY);
 		assertEquals(expected, Range.expandToInclude(testee, Double.POSITIVE_INFINITY));
 	}
+	@Test
+	public void valueOnLowerBound() {
+		Range expected = new Range(-10,10);
+		assertEquals(expected, Range.expandToInclude(testee, -10));
+	}
+	@Test
+	public void valueNegativeNominal () {
+		Range expected = new Range (-10,10);
+		assertEquals(expected,Range.expandToInclude(testee, -1));
+	}
+	@Test
+	public void valueOnUpperBound() {
+		Range expected = new Range(-10,10);
+		assertEquals(expected, Range.expandToInclude(testee, 10));
+	}
+	@Test
+	public void NaNComparison() {
+		Range tester= new Range(Double.NaN,1);
+		Range actual= Range.expandToInclude(tester, Double.NaN);
+		assertTrue(Double.isNaN(actual.getLowerBound()));
+		
+	}
+	@Test
+	public void valuePositiveNominal () {
+		Range expected = new Range (-10,10);
+		assertEquals(expected,Range.expandToInclude(testee, 1));
+	}
 }

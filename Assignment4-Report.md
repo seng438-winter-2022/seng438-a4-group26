@@ -115,7 +115,10 @@ a central value, but instead you get a summation of the bounds.
 ## DataUtilites test classes
 
 ### `DataUtilitiesCalculateColumnTotalArrayTest`
+Originally this test class had a mutation score of 83.51%.
 ### `DataUtilitiesClone`
+Originally this test class had a mutation score of 96.77%.
+
 ### `DataUtilitesTestEqual`
 originally this test class had a mutation score of 91.17% after improvements to the test suite a new mutation score of 94.12% was attained. This was done by including 3 new test cases, which were:
 
@@ -160,9 +163,13 @@ Adding this test case increased the mutation score from **90.47% to 95.24%.**
 ## Range test classes
 
 ### `RangeEquals`
+Originally, this test class had a mutation score of 94.52%.
 ### `RangeExpand`
+Originally, this test class had a mutation score of 85.07%.
 ### `RangeCombineIgnoringNaN`
+Originally, this test class had a mutation score of 77.91%.
 ### `RangConstrainTest`
+Originally, this test class had a mutation score of 56.76%.
 ### `RangeCombineTest`
 Originally, this test class had a mutation score of 78.78%, after improving the test class, a new mutation score of 87.87% was attained. Three test cases were added:
 

@@ -227,9 +227,9 @@ public class DataUtilitiesCalculateColumnTotalArrayTest {
     // Line 156 in source code: post increment of local variable no. 7
     //                          post decrement of local variable no. 7
     // Line 157 in source code: replacing inequalit with true
-    // Line 158 in souce code: post increment of local variable no. 3
+    // Line 158 in source code: post increment of local variable no. 3
     //                         post decrement of local variable no. 3
-    // Line 162 in souce code: post increment of local variable no. 3
+    // Line 162 in source code: post increment of local variable no. 3
     //                         post decrement of local variable no. 3
     // 
 }

@@ -126,7 +126,20 @@ This test class was testing the `equal` function in DataUtilites, this function 
 ### `TestDataUtilitesCumulativePercentages`
 Originally, this test class had a mutation score of 78.62%, after improving the test class, a new mutation score of 95.34% was attained. This was done by updating`testSequentialList` and `DataUtilities` itself to align with the documentation. The few surviving mutations are either replacements of '<' to '!=' in a array loop or a post increment/decrement of a local variable on a return line. Both of these mutations within the context of the implmentation do not produce any failures, thus the mutations live.
 
+### `CreateNumberArray2D`
+Before adding new test cases, the mutation score for this class was 80%. One of the two mutants that survived was changing the for
+loop increment to no increment, creating an infinite loop. This mutant timed out but was never killed by any test case. Thus, 
+a test case was designed that aimed to timeout after a small time (100 ms) to ensure that an infinite loop was caught and the
+test case would fail. This would kill this mutant. Therefore, this test case was added:
 
+`increaseCreateNumberArray2DTwo()`:  test to increase createnumberarray2d mutation score. Specifically to kill the mutant where
+the for loop in createnumberarray2d is mutated to an infinite loop. To kill this mutant, the test was designed to quickly timeout
+and throw a timeout exception when the for loop goes beyond 100 ms, thus killing the infinite loop mutant.
+@throws InterruptedException when timeout occurs.
+
+After this added test case, the mutation score was increased from **80% to 90%**.
+The remaining 10% is from the removal of the ParamChecks.NullNotPermitted() mutation, which was unable to be killed with any 
+additional test cases.
 
 
 ## Range test classes

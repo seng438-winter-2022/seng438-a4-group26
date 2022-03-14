@@ -115,7 +115,17 @@ a central value, but instead you get a summation of the bounds.
 ## DataUtilites test classes
 
 ### `DataUtilitiesCalculateColumnTotalArrayTest`
-Originally this test class had a mutation score of 83.51%. This corrected by adding new test cases and by modifying the original `testCCTANullData` to properly catch null data being passed.
+Originally this test class had a mutation score of 83.51%. This corrected by adding new test cases and by modifying the original `testCCTANullData` to properly catch null data being passed. New test cases were:
+
+`testArrayValues` which was designed specifically to prevent mutations which modified the passed row array and would result in corrupted values.
+
+`testRowExceeding` which tests what happens when a valid row is beyond the possible rows in data grid.
+
+`testNullValues` which test what happens when the data grid contains null values and how it affects the summation.
+
+There were some additional mutations not addressed including mutations which were equivalent (< and != in a for loop condition) or even compiler optimization issues which cannot be found in the original code and are caused by the compiler type and will not cause an issue in production.
+
+Lastly, there were some mutations which post incremented or decremented values that were only every used once (before being returned, before being reassigned) and could not be caught by adding more test cases or modifying code. These errors will not cause issues in production code.
 ### `DataUtilitiesClone`
 Originally this test class had a mutation score of 96.77%.
 

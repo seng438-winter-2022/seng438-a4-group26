@@ -115,7 +115,7 @@ a central value, but instead you get a summation of the bounds.
 ## DataUtilites test classes
 
 ### `DataUtilitiesCalculateColumnTotalArrayTest`
-Originally this test class had a mutation score of 83.51%.
+Originally this test class had a mutation score of 83.51%. This corrected by adding new test cases and by modifying the original `testCCTANullData` to properly catch null data being passed.
 ### `DataUtilitiesClone`
 Originally this test class had a mutation score of 96.77%.
 

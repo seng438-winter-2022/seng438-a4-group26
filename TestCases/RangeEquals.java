@@ -60,8 +60,8 @@ public class RangeEquals {
     }
 
     // TO DO
-    // Line 426 in source code: != to > (no idea how to work with this)
-    // Line 430 in source code: == to < (this.lower must be > range.lower)
-    // Line 433 in source code: == to <= (this.upper must be > range.lower)
-    // Line 436 in source code: substituted 1 with -1 (what happens with this?)
+    // Line 426 in source code: != to >
+    // Line 430 in source code: == to < (DONE)
+    // Line 433 in source code: == to <= (DONE)
+    // Line 436 in source code: substituted 1 with -1
 }

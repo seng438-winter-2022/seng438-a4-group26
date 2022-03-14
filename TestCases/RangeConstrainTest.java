@@ -53,4 +53,39 @@ public class RangeConstrainTest {
         double res = range.constrain(-2);
         assertEquals (-2.0, res, 0);
     }
+
+    // TO DO
+    // Line 188 in source code: post increment of loval variable no. 1
+    //                          post decrement of local variable no. 1
+    // Line 189 in source code: remove call to contains
+    //                          removed conditional and replaced with true
+    //                          negated local variable no. 1
+    //                          != to <
+    //                          != to >
+    //                          post increment of local variable no. 1
+    //                          post decrement of local variable no. 1
+    //                          pre increment of local variable no. 1
+    //                          pre decrement of local variable no. 1
+    // Line 190 in source code: changed conditional boundary
+    //                          negated double field upper
+    //                          <= to <
+    //                          post incrememnt local variable no. 1
+    //                          post decrement local variable no. 1
+    //                          pre increment of local variable no. 1
+    //                          pre decrement of local variable no. 1
+    // Line 191 in source code: post increment of double field upper
+    //                          post decrement of double field upper
+    // Line 193 in source code: changed conditional boundary
+    //                          removed condition and replaced with true
+    //                          negated double field lower
+    //                          <= to <
+    //                          <= to ==
+    //                          post incrememnt local variable no. 1
+    //                          post decrement local variable no. 1
+    //                          pre increment of local variable no. 1
+    //                          pre decrement of local variable no. 1
+    // Line 194 in source code: post increment of double field lower
+    //                          post decrement of double field lower
+    // Line 197 in source code: post increment local variable no. 3
+    //                          post decrement local variable no. 3
 }

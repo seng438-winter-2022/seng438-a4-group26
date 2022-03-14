@@ -68,4 +68,25 @@ public class RangeCombineIgnoringNaN {
         Range result = Range.combineIgnoringNaN (param1, param2);
         assertEquals (null, result);
     }
+
+    // TO DO
+    // Line 242 in source code: == to <=
+    // Line 248 in source code: == to <=
+    // Line 253 in source code: replace call to min with argument (not sure what the argument is)
+    // Line 255 in source code: removed condition and replaced with true (first condition)
+    //                          removed condition and replaced with true (second condition)
+    //                          negated double local variable no. 2
+    //                          negated double local variable no. 4
+    //                          == to < (first condition)
+    //                          == to < (second condition)
+    //                          == to <= (first condition)
+    //                          == to <= (second condition)
+    //                          post increment local variable no. 4
+    //                          post decrement local variable no. 4
+    //                          pre increment local variable no. 4
+    //                          pre decrement local variable no. 4
+    // Line 258 in source code: post increment local variable no. 4
+    //                          post decrement local variable no. 4
+    //                          post increment local variable no. 2
+    //                          post decrement local variable no. 2
 }

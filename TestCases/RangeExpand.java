@@ -69,4 +69,26 @@ public class RangeExpand {
         Range comp = new Range (5, 5);
         assertEquals (comp, result);
     }
+
+    // TO DO
+    // Line 331 in source code: replaced double operation by second member
+    //                          post increment local variable no. 1
+    //                          post decrement local variable no. 1
+    // Line 332 in source code: replace double operation by second member
+    //                          post increment local variable no. 3
+    //                          post decrement local variable no. 3
+    //                          post increment local variable no. 5
+    //                          post decrement local variable no. 5
+    // Line 333 in source code: changed conditional boundary
+    //                          <= to <
+    // Line 334 in source code: replaced double operation with second member
+    //                          replaced double division with subtraction
+    //                          post increment local variable no. 7
+    //                          post decrement local variable no. 7
+    //                          post increment local variable no. 9
+    //                          post decrement local variable no. 9
+    // Line 337 in source code: post increment local variable no. 7
+    //                          post decrement local variable no. 7
+    //                          post increment local variable no. 9
+    //                          post decrement local variable no. 9
 }

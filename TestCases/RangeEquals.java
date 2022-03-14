@@ -51,4 +51,10 @@ public class RangeEquals {
         boolean result = range.equals (param);
         assertFalse (result);
     }
+
+    // TO DO
+    // Line 426 in source code: != to >
+    // Line 430 in source code: == to <
+    // Line 433 in source code: == to <=
+    // Line 436 in source code: substituted 1 with -1
 }

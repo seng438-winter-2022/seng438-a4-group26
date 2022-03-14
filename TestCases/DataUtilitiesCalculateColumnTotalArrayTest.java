@@ -215,4 +215,21 @@ public class DataUtilitiesCalculateColumnTotalArrayTest {
         assertEquals (result, 0, 0);
     }
     
+    // TO DO
+    // Line 150 in source code: removed call fails to catch null not permitted for data type (maybe make sure a case with null data?)
+    // Line 153 in source code: less than changed to not equal survived in for loop
+    // Line 154 in source code: post increment of local variable no. 6
+    //                          post decrement of local variable no. 6
+    // Line 155 in source code: changed conditional boundary
+    //                          greater or equal to greater than
+    //                          post increment of local variable no. 5
+    //                          pre increment of local variable no. 5
+    // Line 156 in source code: post increment of local variable no. 7
+    //                          post decrement of local variable no. 7
+    // Line 157 in source code: replacing inequalit with true
+    // Line 158 in souce code: post increment of local variable no. 3
+    //                         post decrement of local variable no. 3
+    // Line 162 in souce code: post increment of local variable no. 3
+    //                         post decrement of local variable no. 3
+    // 
 }

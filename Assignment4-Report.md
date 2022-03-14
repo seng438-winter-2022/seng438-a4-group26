@@ -163,7 +163,11 @@ Adding this test case increased the mutation score from **90.47% to 95.24%.**
 ## Range test classes
 
 ### `RangeEquals`
-Originally, this test class had a mutation score of 94.52%.
+Originally, this test class had a mutation score of 94.52%. This score was increased to ________ by adding one test case.
+
+`testRangeGreater` which tests when the calling range is greater than the compared range (ie. lower > lower and upper > upper).
+
+The ckass failed to detect 4 mutations of 73. 1 of the mutations not fixed involved returning -1 instead of a boolean value of 1 or 0. Since the source code returns the bool values `true` or `false` (and not integer values) this should not be a concern in production. The second mutation not fixed changed the condition in `if (!(obj instanceof Range))` from != to > which also would not be possible in deployment as the call is a function call (not a comparison call).
 ### `RangeExpand`
 Originally, this test class had a mutation score of 85.07%.
 ### `RangeCombineIgnoringNaN`

@@ -52,9 +52,16 @@ public class RangeEquals {
         assertFalse (result);
     }
 
+    @Test
+    public void testRangeGreater () {
+        Range param = new Range (-3, 5);
+        boolean result = range.equals (param);
+        assertFalse (result);
+    }
+
     // TO DO
-    // Line 426 in source code: != to >
-    // Line 430 in source code: == to <
-    // Line 433 in source code: == to <=
-    // Line 436 in source code: substituted 1 with -1
+    // Line 426 in source code: != to > (no idea how to work with this)
+    // Line 430 in source code: == to < (this.lower must be > range.lower)
+    // Line 433 in source code: == to <= (this.upper must be > range.lower)
+    // Line 436 in source code: substituted 1 with -1 (what happens with this?)
 }

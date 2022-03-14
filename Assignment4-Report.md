@@ -147,11 +147,11 @@ was changed to if(true), and the other was removing the ParamChecks.NullNotPermi
 The ParamChecks call was not easily killed by an additional test case, and thus was not killed by any new test cases.
 The if(n!=null)->if(true) was easily killed, however. Since all the exisiting test cases never had a cell that contained
 a null value in them (n), this if statement was always evaluated to true anyways. Thus, to kill the mutant a new test case had
-to be devised where n==null at some point, and thus the test case would fail. The created test case was:
-`nullCell()` :Test case for calculateRowTotal to kill the mutant where "if(n!=null)" is changed to "if(true)". 
+to be devised where n==null at some point, and thus the test case would fail. <br /> The created test case was: <br />
+<br /> `nullCell()` :Test case for calculateRowTotal to kill the mutant where "if(n!=null)" is changed to "if(true)". 
 To catch this mutation, we make a test case where n (a cell value within the row we're calculating) is in fact equal to null, and 
 thus should never reach inside of the aforementioned if statement. Since the mutant will (if(true)), the computed value will 
-differ and thus the test case will fail, and the mutant killed.
+differ and thus the test case will fail, and the mutant killed. <br />
 
 Adding this test case increased the mutation score from **90.47% to 95.24%.**
 

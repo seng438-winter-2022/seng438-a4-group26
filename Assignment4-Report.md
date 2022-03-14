@@ -127,7 +127,11 @@ There were some additional mutations not addressed including mutations which wer
 
 Lastly, there were some mutations which post incremented or decremented values that were only every used once (before being returned, before being reassigned) and could not be caught by adding more test cases or modifying code. These errors will not cause issues in production code.
 ### `DataUtilitiesClone`
-Originally this test class had a mutation score of 96.77%.
+Originally this test class had a mutation score of 96.77%. One new test case was built to address one of the failed mutations.
+
+`testNullRow` tests when one row in an array is `null` to ensure that the new array is built properly.
+
+The only other mutation from this case was where the for loop condition was changed from < to != which is equivalent.
 
 ### `DataUtilitesTestEqual`
 originally this test class had a mutation score of 91.17% after improvements to the test suite a new mutation score of 94.12% was attained. This was done by including 3 new test cases, which were:

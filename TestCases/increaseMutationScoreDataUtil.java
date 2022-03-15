@@ -31,13 +31,19 @@ public class increaseMutationScoreDataUtil{
 
 	/**
 	 * Attempt to catch mutation where paramchecks.nullnotpermitted is removed.
+	 * Kills mutant by passing null argument, and expecting the specific IllegalArgumentException that nullnotpermitted throws when null
 	 */
-	@Test (expected = Exception.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void increaseCreateNumberArray2D(){
+		
+		
 		double[][] dataIn = null;
+		
+		
 		Number[][] recv = DataUtilities.createNumberArray2D(dataIn);
-		assertEquals(recv, null);
-		//ParamChecks.nullNotPermitted(dataIn, "dataIn");
+		
+		//assertEquals(recv, null);
+		
 	}
 	
 	/**
@@ -81,6 +87,25 @@ public class increaseMutationScoreDataUtil{
 		double calculateMe = DataUtilities.calculateRowTotal(values, 0, rows);
 		
 		assertEquals(0,calculateMe,0);
+	}
+	
+	/**
+	 * Test to kill mutant where null not permitted is not called
+	 * Does this by passing null argument to calculateRowTotal and then expecting the specific illegal arg exception
+	 */
+	@Test(expected=IllegalArgumentException.class)
+	public void nullArgCalcRow() {
+		double total  = DataUtilities.calculateRowTotal(null, 0);
+	}
+	
+	/**
+	 * Test to kill mutant where null not permitted is not called
+	 * Does this by passing null argument to calculateRowTotal and then expecting the specific illegal arg exception
+	 */
+	@Test(expected=IllegalArgumentException.class)
+	public void nullArgCalcRowTotal() {
+		int []valds = {1,2};
+		double total  = DataUtilities.calculateRowTotal(null, 0, valds);
 	}
 	
 	

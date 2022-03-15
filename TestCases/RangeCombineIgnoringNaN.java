@@ -33,7 +33,7 @@ public class RangeCombineIgnoringNaN {
         Range param2 = new Range (Double.NaN, 3);
         Range result = Range.combineIgnoringNaN (param1, param2);
         Range comp = new Range (1,3);
-        assertEquals (null, comp);
+        assertEquals (comp, result);
     }
 
     @Test
@@ -85,7 +85,7 @@ public class RangeCombineIgnoringNaN {
         Range param2 = new Range (Double.NaN, 3);
         Range result = Range.combineIgnoringNaN (param1, param2);
         
-        if (!result.getLowerBound().isNaN) {
+        if (!Double.isNaN(result.getLowerBound())) {
             fail ();
         }
         if (result.getUpperBound() != 8.0) {
@@ -101,7 +101,7 @@ public class RangeCombineIgnoringNaN {
         if (result.getLowerBound() != -3.0) {
             fail ();
         }
-        if (!result.getUpperBound().isNaN()) {
+        if (!Double.isNaN(result.getUpperBound())) {
             fail ();
         }
     }

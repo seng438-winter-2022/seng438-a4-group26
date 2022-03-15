@@ -73,7 +73,7 @@ public class RangeExpand {
     @Test
     public void testEqual () { // range modification makes lower and upper equal
         Range origin = new Range (1,10);
-        Range result = Range.expand(origin,-0.5, 0.5);
+        Range result = Range.expand(origin,-0.5, -0.5);
         Range comp = new Range (5.5,5.5);
         assertEquals (comp, result);
     }

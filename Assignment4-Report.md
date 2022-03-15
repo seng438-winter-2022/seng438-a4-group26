@@ -264,3 +264,4 @@ Also, this type of testing takes a lot of time, and even though many tools are a
 # Difficulties encountered, challenges overcome, and lessons learned
 
 # Comments/feedback on the lab itself
+The pit mutation tool required a lot of time to run on your code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. I also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. I also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.

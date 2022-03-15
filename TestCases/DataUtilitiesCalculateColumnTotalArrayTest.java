@@ -141,7 +141,7 @@ public class DataUtilitiesCalculateColumnTotalArrayTest {
         assertEquals (result, 1.7, 0);
     }
     
-    @Test (expected = IllegalArgumentException)
+    @Test (expected = IllegalArgumentException.class)
     public void testCCTANullData () throws IllegalArgumentException{
         int [] validRows = {0,1};
         double result = DataUtilities.calculateColumnTotal (null, 1, validRows);

@@ -197,7 +197,8 @@ Adding this test case increased the mutation score to **100%**.
 ## Range test classes
 
 ### `RangeEquals`
-Originally, this test class had a mutation score of 94.52%. This score was increased to ________ by adding one test case.
+Originally, this test class had a mutation score of 94.52%. One test case was added.
+
 
 `testRangeGreater` which tests when the calling range is greater than the compared range (ie. lower > lower and upper > upper).
 
@@ -266,9 +267,10 @@ After adding this test case, the hashCode() mutation score increased to **100%**
 Initially, as seen in the uploaded pictures, the DataUtilities class had a mutation score of 88% and Range had 68%. 
 This indicates that the test classes for testing the DataUtilities class was relatively effective, as a large majority of
 injected faults/mutants were caught by these test cases. Similarly, the test cases for the range class were also effective, as 
-approximately two thirds of all injected mutants were effectively caught by our created test classes for Range.
+approximately two thirds of all injected mutants were effectively caught by our created test classes. Additionally, mutants for class range included more equivalent mutants, or unaffecting mutants, meaning our coverage still caught important mutants (even before changes).
 This fact indicates that the initial test classes from the previous assignment were relatively extensive and effective in 
 catching bugs. 
+
 After adding new test cases to the existing test classes, most classes were able to achieve 100% or near 100% mutation score. 
 This indicates that with a few added test cases for each class, the test classes were **very effective** at catching mutants, 
 and thus comprised a very precise test class, and thus very effective test cases for each method and the overall system under test.
@@ -279,17 +281,23 @@ a strong set of test cases.
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 The presence of equivalent mutations has an impact on the quantitative mutation score accuracy for mutation testing.
 Specifically, equivalent mutants make it where a block of code under test may actually have a higher mutation score in reality
-than the tool reports. This is due to the possible presence of equivalent mutations that the mutation tool does not avoid and 
-thus reports as multiple surviving mutants when in fact it is really one single logical mutant missed.
+than the tool reports. 
 
-...to be continued
+Additionally, some other mutations cannot be detected by test cases such as the post incrementation of a returned value which will not affect production code, nor will it be caught. Due to cases like this, mutation score may be a less accurate. 
+
+With mutation cases that are equivalent or unreachable or even do not change anything, the mutation score will be a little less accurate of a reflection of the accuracy of test cases. It will also make it difficult to eliminate all mutants and achieve a score of 100% for any class. However, since all classes will likely have some of these unfixable mutants, the score is evenly affected for all test classes and we can simply lower our threshhold from 100% to accurately reflect the quality of tests.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
-Mutation testing is used to see how well our test cases are able to catch mutations in the code. Also, we can use mutation testing to see which parts of the code wasn't covered adequately by test cases. Hidden bugs would not be able to be identified by any other type of testing. By running mutation tests, we can see how well our test cases covers these hidden bugs, and overall how good our testing covers the code when it comes to mutations. The fact it can catch these holes in test suites and catch hidden defects is a huge advantage of this type of testing. This type of testing catches all faults.
-This also ensures the original code is well covered overall. We can ensure testing is done to a high standard. However, this testing is complex, and takes a lot of time to do. Also, the tester needs extensive knowledge about the original code in order to create these types of tests. This also means this type of testing isn't usable for black box testing.
-Also, this type of testing takes a lot of time, and even though many tools are automated, it still takes a lot of time to run the test tool, and then analyze it. 
+Mutation testing is used to see how well our test cases are able to catch mutations in the code. Also, we can use mutation testing to see which parts of the code wasn't covered adequately by test cases. Hidden bugs would not be able to be identified by any other type of testing. By running mutation tests, we can see how well our test cases covers these hidden bugs, and overall how good our testing covers the code when it comes to mutations. The fact it can catch these holes in test suites and catch hidden defects is a huge advantage of this type of testing. This also ensures the original code is well covered overall. We can ensure testing is done to a high standard. 
+
+However, this testing is complex, and takes a lot of time to do. Also, the tester needs extensive knowledge about the original code in order to create these types of tests. This also means this type of testing isn't usable for black box testing.
+Even though many tools are automated, it still takes a lot of time to run the test tool, and then analyze it. 
+
+Mutation testing (especially in this lab) will also be calculated on the entire SUT despite test cases being designed and built for only 2 classes which is resource intensive and brings little value. Additionally, as mentioned in the mutation score accuracy discussion, some mutations are not helpful for debugging but will likely take up tester's time and resource, trying to solve an unsolvable or irrelevant problem.
+
+Overall, mutation testing allows for comprehensive results.
 # Explain your SELENUIM test case design process
 
 # Explain the use of assertions and checkpoints
@@ -299,8 +307,19 @@ Also, this type of testing takes a lot of time, and even though many tools are a
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
 # How the team work/effort was divided and managed
+Team work was easily divided between the mutation testing and the selenium testing as follows.
+
+Each member added mutation tests for the test classes developed in earlier labs ensure maximum familiarity with modules, distribution of Mock test, Data Utilities test, and Range tests.
+
+Selenium testing was divided such that each member worked on 2/8 functionalities, creating test cases as the functionality required.
 
 # Difficulties encountered, challenges overcome, and lessons learned
+This lab was much longer and more labour intensive than previous labs showing us how mutation testing and GUI testing development requires a lot of work and effort. This helps build on the fact that extensive testing is difficult and helps stress the need to find a balance between testing and effort.
 
+We also (once again) had issue with running the module on one of the team member's computer, resulting in the need to double up on some devices for a little bit. This slowed down progress marginally but also increased team communication.
+
+Additionally, the GUI testing was quite long and had to be a combination of the recording and manual modifications to the test code. Even after developing the tests, occasionally they would not work due to changes to the actual site. Best we could, we modified the tests to reflect the new changes but it added more work to the lab.
 # Comments/feedback on the lab itself
-The pit mutation tool required a lot of time to run on your code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. I also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. I also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.
+The pit mutation tool required a lot of time to run on your code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. We also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. We also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.
+
+As mentioned above, GUI testing was quite time extensive and required manual as well as automatic recording. It may have been nice to have a common debugging list of things that the recording may not properly pick up that would need to be modified manually in code so that we knew what to look for.

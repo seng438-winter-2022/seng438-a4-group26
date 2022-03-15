@@ -351,6 +351,7 @@ this functionality was tested with the `TestTradeIn` script. There are two test 
 both test cases worked as expected.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+Selenium unlike Sikulix accepts more languages, including Java which is what the test scripts were written in. Additionally the Selenium IDE is a much more graphicaly pleasing and easier to understand IDE compared to Sikulix. However it is very easy to add a screenshot or a portion of a screenshot using Sikulix unlike Selenium. Overall Selenium is a better choice due to it's simplicity and ease of use.
 
 
 # How the team work/effort was divided and managed

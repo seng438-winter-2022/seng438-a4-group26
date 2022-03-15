@@ -319,8 +319,8 @@ Mutation testing (especially in this lab) will also be calculated on the entire 
 
 Overall, mutation testing allows for comprehensive results.
 # Explain your SELENUIM test case design process
-first a decision was reached on the website and the tested functionalities, for this lab, www.bestbuy.ca was chosen.
-a list of functionalities was decided after exploring the website, they were:  
+First a decision was reached on the website and the tested functionalities, for this lab, [www.bestbuy.ca](www.bestbuy.ca) was chosen.
+A list of functionalities was decided after exploring the website, they were:  
 
 1. register a new account  
 2. login to an account  
@@ -333,20 +333,39 @@ a list of functionalities was decided after exploring the website, they were:
 
 From here, each person went through their functionalities and decided the best test script for their functionality based on who these functionalities would be used by real customers.
 # Explain the use of assertions and checkpoints
-Checkpoints and assertions are vital in GUI testing. Checkpoints catch early test failures and speed up the testing process, assertions verify that the final outcome of the test matches what is expect4ed. 
+Checkpoints and assertions are vital in GUI testing. Checkpoints catch early test failures and speed up the testing process, assertions verify that the final outcome of the test matches what is expected. 
 
-# how did you test each functionaity with different test data
+# How did you test each functionaity with different test data
 
-## Functionality 4. find a product through the "Shop" tab
+## Functionality 4. Find a product through the "Shop" tab
 this functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndModelFilters` script. There are three test cases for this functionality:
 `idealPathTest` - the ideal path using the shop tab to find a certain product
 `enterCharIntoNumFieldTest` - a char is entered into the price range enter box when filtering for the product
 `enterInvalidRangeIntoNumFieldTest` - the price range enter box receives an invalid range of min=4000 and max=2500
 of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the website should have simply reset the product list page to what it was before the price filter but it actually brought an Error 404. 
 
-## Functionality 8. use the trade in program UI under the "Servicecs" tab
-this functionality was tested with the `TestTradeIn` script. There are two test cases for this functionality:
+## Functionality 5. Find a product through the "Brands" tab  
+This functionality is tested in _______________ script. THis script searches through JBL to find the *JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black*. There are ______ cases for this functionality:
+
+1. `IdealPathTest` which looks for the most ideal path from the home page to find a product through the brands tab.
+2. `AlphabeticalPath` which uses the brands tab then goes alphabetically instead of using popular brands.
+
+Note, because this test uses the popular brands tab, there is a chance that this changes since inception of the tests.
+
+## Functionality 6. Find a product through the "Top Deals" tab 
+This functionality is tested in ___________ script. The item to be found was the *Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White*. There are _____ cases for this functionality:
+
+1. `IdealPathTest` which takes the most direct path using the menu bar to find a featured item.
+2. `PromotionPath` which uses the home page promotion tab for "Top Deals" as a way to navigate.
+3. `FullPath` which will use the menu bar and scoll all the way down to the full list of features to find an item.
+
+It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until ready to hand in.
+
+## Functionality 8. Use the trade in program UI under the "Servicecs" tab
+This functionality was tested with the `TestTradeIn` script. There are two test cases for this functionality:
+
 `IdealPathTest` - the ideal path for the trade in calculator
+
 `selectAPhoneThenSwitchBrand` - switch the phone brand after selecting a phone to see if the phone would be reset
 both test cases worked as expected.
 

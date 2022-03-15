@@ -222,6 +222,8 @@ Originally, this test class had a mutation score of 77.91%. 3 test cases were ad
 `bothMinNaN` - neither range in NaN but both lower bounds are NaN.
 
 `bothMaxNaN` - neither range in NaN but both upper bounds are NaN.
+
+Some compiler and post modification of variables (which were reassigned or not used again) errors caused by the mutations were not corrected.
 ### `RangConstrainTest`
 Originally, this test class had a mutation score of 56.76%.
 ### `RangeCombineTest`

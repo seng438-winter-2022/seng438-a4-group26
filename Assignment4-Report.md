@@ -204,7 +204,14 @@ Originally, this test class had a mutation score of 94.52%. One test case was ad
 
 The ckass failed to detect 4 mutations of 73. 1 of the mutations not fixed involved returning -1 instead of a boolean value of 1 or 0. Since the source code returns the bool values `true` or `false` (and not integer values) this should not be a concern in production. The second mutation not fixed changed the condition in `if (!(obj instanceof Range))` from != to > which also would not be possible in deployment as the call is a function call (not a comparison call).
 ### `RangeExpand`
-Originally, this test class had a mutation score of 85.07%.
+Originally, this test class had a mutation score of 85.07%. 3 new test cases were added to improve this score.
+
+`testEquals` - designed to have negative overlap margins to make upper and lower exactly equal.
+
+`testBoundRemoval` - test for omition in calculations where bounds are not used at all.
+
+`testOverlapUpperLower` - test for calculation overlap to ensure subtraction cannot be used.
+
 ### `RangeCombineIgnoringNaN`
 Originally, this test class had a mutation score of 77.91%.
 ### `RangConstrainTest`

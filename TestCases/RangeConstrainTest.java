@@ -32,13 +32,13 @@ public class RangeConstrainTest {
     
     @Test
     public void testRangeOutOfRangeAbove () {
-        double res = range.constrain(154);
+        double res = range.constrain(13);
         assertEquals (12.0, res, 0);
     }
     
     @Test
     public void testRangeOutOfRangeBelow () {
-        double res = range.constrain(-62);
+        double res = range.constrain(-3);
         assertEquals (-2.0, res, 0);
     }
     
@@ -55,37 +55,37 @@ public class RangeConstrainTest {
     }
 
     // TO DO
-    // Line 188 in source code: post increment of loval variable no. 1
-    //                          post decrement of local variable no. 1
-    // Line 189 in source code: remove call to contains
-    //                          removed conditional and replaced with true
-    //                          negated local variable no. 1
-    //                          != to <
-    //                          != to >
-    //                          post increment of local variable no. 1
-    //                          post decrement of local variable no. 1
-    //                          pre increment of local variable no. 1
-    //                          pre decrement of local variable no. 1
-    // Line 190 in source code: changed conditional boundary
-    //                          negated double field upper
-    //                          <= to <
-    //                          post incrememnt local variable no. 1
-    //                          post decrement local variable no. 1
-    //                          pre increment of local variable no. 1
-    //                          pre decrement of local variable no. 1
-    // Line 191 in source code: post increment of double field upper
-    //                          post decrement of double field upper
-    // Line 193 in source code: changed conditional boundary
-    //                          removed condition and replaced with true
-    //                          negated double field lower
-    //                          <= to <
-    //                          <= to ==
-    //                          post incrememnt local variable no. 1
-    //                          post decrement local variable no. 1
-    //                          pre increment of local variable no. 1
-    //                          pre decrement of local variable no. 1
-    // Line 194 in source code: post increment of double field lower
-    //                          post decrement of double field lower
-    // Line 197 in source code: post increment local variable no. 3
-    //                          post decrement local variable no. 3
+    // Line 188 in source code: post increment of loval variable no. 1 (DONE - modified)
+    //                          post decrement of local variable no. 1 (DONE - modified)
+    // Line 189 in source code: remove call to contains (EQUIVALENT - if replaced, the nested conditions catch it)
+    //                          removed conditional and replaced with true (EQUIVALENT - if replaced, the nested conditions catch it)
+    //                          negated local variable no. 1 (DONE - modified)
+    //                          != to < (COMPILER)
+    //                          != to > (COMPILER)
+    //                          post increment of local variable no. 1 (DONE - modified)
+    //                          post decrement of local variable no. 1 (DONE - modified)
+    //                          pre increment of local variable no. 1 (DONE - modified)
+    //                          pre decrement of local variable no. 1 (DONE - modified)
+    // Line 190 in source code: changed conditional boundary (EQUIVALENT - due to previous condition)
+    //                          negated double field upper (EQUIVALENT - does not modify conditional results)
+    //                          <= to < (COMPILER)
+    //                          post incrememnt local variable no. 1 (Not caught, never used again)
+    //                          post decrement local variable no. 1 (Not caught, never used again)
+    //                          pre increment of local variable no. 1 (Not caught, never used again)
+    //                          pre decrement of local variable no. 1 (Not caught, never used again)
+    // Line 191 in source code: post increment of double field upper (Not caught, never used again)
+    //                          post decrement of double field upper (Not caught, never used again)
+    // Line 193 in source code: changed conditional boundary (EQUIVALENT - due to previous condition)
+    //                          removed condition and replaced with true (EQUIVALENT - due to previous condition)
+    //                          negated double field lower (DONE - modified)
+    //                          <= to < (COMPILER)
+    //                          <= to == (COMPILER)
+    //                          post incrememnt local variable no. 1 (Not caught, never used again)
+    //                          post decrement local variable no. 1 (Not caught, never used again)
+    //                          pre increment of local variable no. 1 (Not caught, never used again)
+    //                          pre decrement of local variable no. 1 (Not caught, never used again)
+    // Line 194 in source code: post increment of double field lower (Not caught, never used again)
+    //                          post decrement of double field lower (Not caught, never used again)
+    // Line 197 in source code: post increment local variable no. 3 (Not caught, never used again)
+    //                          post decrement local variable no. 3 (Not caught, never used again)
 }

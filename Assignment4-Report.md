@@ -225,7 +225,9 @@ Originally, this test class had a mutation score of 77.91%. 3 test cases were ad
 
 Some compiler and post modification of variables (which were reassigned or not used again) errors caused by the mutations were not corrected.
 ### `RangConstrainTest`
-Originally, this test class had a mutation score of 56.76%.
+Originally, this test class had a mutation score of 56.76%. 2 test cases were modified to test better metrics. These test cases were `testRangeOutOfRangeAbove` and `testRangeOutOfRangeAbove` where BLB and AUB values were used.
+
+No other modifications could be made to catch errors. This was due to the structure of the nested conditions which made changes to any individual condition not impact the tests and due to modifciation of variable which were never used again.
 ### `RangeCombineTest`
 Originally, this test class had a mutation score of 78.78%, after improving the test class, a new mutation score of 87.87% was attained. Three test cases were added:
 

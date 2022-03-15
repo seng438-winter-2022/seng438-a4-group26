@@ -202,7 +202,7 @@ Originally, this test class had a mutation score of 94.52%. One test case was ad
 
 `testRangeGreater` which tests when the calling range is greater than the compared range (ie. lower > lower and upper > upper).
 
-The ckass failed to detect 4 mutations of 73. 1 of the mutations not fixed involved returning -1 instead of a boolean value of 1 or 0. Since the source code returns the bool values `true` or `false` (and not integer values) this should not be a concern in production. The second mutation not fixed changed the condition in `if (!(obj instanceof Range))` from != to > which also would not be possible in deployment as the call is a function call (not a comparison call).
+The class failed to detect 4 mutations of 73. 1 of the mutations not fixed involved returning -1 instead of a boolean value of 1 or 0. Since the source code returns the bool values `true` or `false` (and not integer values) this should not be a concern in production. The second mutation not fixed changed the condition in `if (!(obj instanceof Range))` from != to > which also would not be possible in deployment as the call is a function call (not a comparison call).
 ### `RangeExpand`
 Originally, this test class had a mutation score of 85.07%. 3 new test cases were added to improve this score.
 
@@ -211,6 +211,8 @@ Originally, this test class had a mutation score of 85.07%. 3 new test cases wer
 `testBoundRemoval` - test for omition in calculations where bounds are not used at all.
 
 `testOverlapUpperLower` - test for calculation overlap to ensure subtraction cannot be used.
+
+Not all mutants could be fixed as they were post increment or decrement of a variable which will not be used again in the future before recalculation and tests cannot find that. Additional other ones are compilation optimizations that cannot be seen in the code and therefore cannot be corrected by test cases but will also not appear as bugs in production code.
 
 ### `RangeCombineIgnoringNaN`
 Originally, this test class had a mutation score of 77.91%.

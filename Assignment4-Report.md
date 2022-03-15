@@ -248,7 +248,9 @@ After adding this test case, the hashCode() mutation score increased to **100%**
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
-
+Mutation testing is used to see how well our test cases are able to catch mutations in the code. Also, we can use mutation testing to see which parts of the code wasn't covered adequately by test cases. Hidden bugs would not be able to be identified by any other type of testing. By running mutation tests, we can see how well our test cases covers these hidden bugs, and overall how good our testing covers the code when it comes to mutations. The fact it can catch these holes in test suites and catch hidden defects is a huge advantage of this type of testing. This type of testing catches all faults.
+This also ensures the original code is well covered overall. We can ensure testing is done to a high standard. However, this testing is complex, and takes a lot of time to do. Also, the tester needs extensive knowledge about the original code in order to create these types of tests. This also means this type of testing isn't usable for black box testing.
+Also, this type of testing takes a lot of time, and even though many tools are automated, it still takes a lot of time to run the test tool, and then analyze it. 
 # Explain your SELENUIM test case design process
 
 # Explain the use of assertions and checkpoints

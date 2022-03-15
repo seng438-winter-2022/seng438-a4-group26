@@ -115,7 +115,7 @@ a central value, but instead you get a summation of the bounds.
 ## DataUtilites test classes
 
 ### `DataUtilitiesCalculateColumnTotalArrayTest`
-Originally this test class had a mutation score of 83.51%. This corrected by adding new test cases and by modifying the original `testCCTANullData` to properly catch null data being passed. New test cases were:
+Originally this test class had a mutation score of 83.51% which became 92.31%. This corrected by adding new test cases and by modifying the original `testCCTANullData` to properly catch null data being passed. New test cases were:
 
 `testArrayValues` which was designed specifically to prevent mutations which modified the passed row array and would result in corrupted values.
 
@@ -127,7 +127,7 @@ There were some additional mutations not addressed including mutations which wer
 
 Lastly, there were some mutations which post incremented or decremented values that were only every used once (before being returned, before being reassigned) and could not be caught by adding more test cases or modifying code. These errors will not cause issues in production code.
 ### `DataUtilitiesClone`
-Originally this test class had a mutation score of 96.77%. One new test case was built to address one of the failed mutations.
+Originally this test class had a mutation score of 95.34% and is now 96.77%. One new test case was built to address one of the failed mutations.
 
 `testNullRow` tests when one row in an array is `null` to ensure that the new array is built properly.
 
@@ -197,14 +197,14 @@ Adding this test case increased the mutation score to **100%**.
 ## Range test classes
 
 ### `RangeEquals`
-Originally, this test class had a mutation score of 94.52%. One test case was added.
+Originally, this test class had a mutation score of 93.15% it was increased to 94.52%. One test case was added.
 
 
 `testRangeGreater` which tests when the calling range is greater than the compared range (ie. lower > lower and upper > upper).
 
 The class failed to detect 4 mutations of 73. 1 of the mutations not fixed involved returning -1 instead of a boolean value of 1 or 0. Since the source code returns the bool values `true` or `false` (and not integer values) this should not be a concern in production. The second mutation not fixed changed the condition in `if (!(obj instanceof Range))` from != to > which also would not be possible in deployment as the call is a function call (not a comparison call).
 ### `RangeExpand`
-Originally, this test class had a mutation score of 85.07%. 3 new test cases were added to improve this score.
+Originally, this test class had a mutation score of 85.07% to 88.05%. 3 new test cases were added to improve this score.
 
 `testEquals` - designed to have negative overlap margins to make upper and lower exactly equal.
 
@@ -225,11 +225,11 @@ Originally, this test class had a mutation score of 77.91%. 3 test cases were ad
 
 Some compiler and post modification of variables (which were reassigned or not used again) errors caused by the mutations were not corrected.
 ### `RangConstrainTest`
-Originally, this test class had a mutation score of 56.76%. 2 test cases were modified to test better metrics. These test cases were `testRangeOutOfRangeAbove` and `testRangeOutOfRangeAbove` where BLB and AUB values were used.
+Originally, this test class had a mutation score of 56.76% and is now 71.62%. 2 test cases were modified to test better metrics. These test cases were `testRangeOutOfRangeAbove` and `testRangeOutOfRangeAbove` where BLB and AUB values were used.
 
 No other modifications could be made to catch errors. This was due to the structure of the nested conditions which made changes to any individual condition not impact the tests and due to modifciation of variable which were never used again.
 ### `RangeCombineTest`
-Originally, this test class had a mutation score of 78.78%, after improving the test class, a new mutation score of 87.87% was attained. Three test cases were added:
+Originally, this test class had a mutation score of 78.78% and is now 93.02%, after improving the test class, a new mutation score of 87.87% was attained. Three test cases were added:
 
 `testLargeR2smallR1` - A test for where R2 is a large range that has negative values and R1 is entirely positive  
 `testBothRangesHaveNegativeLowers` - A test where both R1 and R2 have a negative lower bound  

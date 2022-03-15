@@ -307,6 +307,7 @@ Additionally, some other mutations cannot be detected by test cases such as the 
 With mutation cases that are equivalent or unreachable or even do not change anything, the mutation score will be a little less accurate of a reflection of the accuracy of test cases. It will also make it difficult to eliminate all mutants and achieve a score of 100% for any class. However, since all classes will likely have some of these unfixable mutants, the score is evenly affected for all test classes and we can simply lower our threshhold from 100% to accurately reflect the quality of tests.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
+The test cases were improved as mush as possible, however there were certain mutations that were impossible or very difficult to kill. Some of these like post increments/decrements on return lines really cannot be killed in Java, but other mutants that were results of compiler optimization may be killed if the exact compiler optimizations were known.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 Mutation testing is used to see how well our test cases are able to catch mutations in the code. Also, we can use mutation testing to see which parts of the code wasn't covered adequately by test cases. Hidden bugs would not be able to be identified by any other type of testing. By running mutation tests, we can see how well our test cases covers these hidden bugs, and overall how good our testing covers the code when it comes to mutations. The fact it can catch these holes in test suites and catch hidden defects is a huge advantage of this type of testing. This also ensures the original code is well covered overall. We can ensure testing is done to a high standard. 
@@ -318,12 +319,39 @@ Mutation testing (especially in this lab) will also be calculated on the entire 
 
 Overall, mutation testing allows for comprehensive results.
 # Explain your SELENUIM test case design process
+first a decision was reached on the website and the tested functionalities, for this lab, www.bestbuy.ca was chosen.
+a list of functionalities was decided after exploring the website, they were:  
 
+1. register a new account  
+2. login to an account  
+3. find a specific product using search  
+4. find a product through "Shop" tab  
+5. find a product through the "Brands" tab  
+6. find a product through the "Top Deals" tab  
+7. add a product to the cart and view the cart  
+8. use the trade in program UI under the "Services" tab  
+
+From here, each person went through their functionalities and decided the best test script for their functionality based on who these functionalities would be used by real customers.
 # Explain the use of assertions and checkpoints
+Checkpoints and assertions are vital in GUI testing. Checkpoints catch early test failures and speed up the testing process, assertions verify that the final outcome of the test matches what is expect4ed. 
 
 # how did you test each functionaity with different test data
 
+## Functionality 4. find a product through the "Shop" tab
+this functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndModelFilters` script. There are three test cases for this functionality:
+`idealPathTest` - the ideal path using the shop tab to find a certain product
+`enterCharIntoNumFieldTest` - a char is entered into the price range enter box when filtering for the product
+`enterInvalidRangeIntoNumFieldTest` - the price range enter box receives an invalid range of min=4000 and max=2500
+of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the website should have simply reset the product list page to what it was before the price filter but it actually brought an Error 404. 
+
+## Functionality 8. use the trade in program UI under the "Servicecs" tab
+this functionality was tested with the `TestTradeIn` script. There are two test cases for this functionality:
+`IdealPathTest` - the ideal path for the trade in calculator
+`selectAPhoneThenSwitchBrand` - switch the phone brand after selecting a phone to see if the phone would be reset
+both test cases worked as expected.
+
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+
 
 # How the team work/effort was divided and managed
 Team work was easily divided between the mutation testing and the selenium testing as follows.

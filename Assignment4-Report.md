@@ -215,7 +215,13 @@ Originally, this test class had a mutation score of 85.07%. 3 new test cases wer
 Not all mutants could be fixed as they were post increment or decrement of a variable which will not be used again in the future before recalculation and tests cannot find that. Additional other ones are compilation optimizations that cannot be seen in the code and therefore cannot be corrected by test cases but will also not appear as bugs in production code.
 
 ### `RangeCombineIgnoringNaN`
-Originally, this test class had a mutation score of 77.91%.
+Originally, this test class had a mutation score of 77.91%. 3 test cases were added to improve the score.
+
+`testRange2LowerisMin` - the second parameter contains the values necessary to create the range (ie range 2 encompases range 1)
+
+`bothMinNaN` - neither range in NaN but both lower bounds are NaN.
+
+`bothMaxNaN` - neither range in NaN but both upper bounds are NaN.
 ### `RangConstrainTest`
 Originally, this test class had a mutation score of 56.76%.
 ### `RangeCombineTest`
@@ -328,6 +334,8 @@ This lab was much longer and more labour intensive than previous labs showing us
 We also (once again) had issue with running the module on one of the team member's computer, resulting in the need to double up on some devices for a little bit. This slowed down progress marginally but also increased team communication.
 
 Additionally, the GUI testing was quite long and had to be a combination of the recording and manual modifications to the test code. Even after developing the tests, occasionally they would not work due to changes to the actual site. Best we could, we modified the tests to reflect the new changes but it added more work to the lab.
+
+We also had difficulties with the mutation test report in identifying what local variable X was and resulted in some guess work.
 # Comments/feedback on the lab itself
 The pit mutation tool required a lot of time to run on your code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. We also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. We also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.
 

@@ -193,6 +193,31 @@ the IllegalArgumentException back from the method due to paramCheck. Thus, the a
 calculateRowTotal and then expecting the specific illegal arg exception.
 Adding this test case increased the mutation score to **100%**.
 
+### `createNumberArray`
+After running the initial test class on createNumberArray(), a couple of mutants persisted and survived. Namely, the
+removal of ParamChecks.NullNotPermitted() call in createNumberArray mutant survived. Also, a mutant where the for loop
+was turned into an infinite loop timed out. 
+To kill the ParamChecks.NullNotPermitted removal mutant, the test case `nullNotPermittedNumberArray()` was created. 
+This test case simply passed a null double array as the argument to createNumberArray(), and expected the IllegalArgumentException
+that paramChecks.NullNotPermitted would normally call. When the mutation removes this call, the program will still throw
+a NullPointerException, but since the IllegalArgumentException from ParamChecks.NullNotPermitted isn't the exception thrown
+, this test case will fail and kill this mutant.
+To attempt to avoid the time out mutant, the test case `test()` was added. This test case simply called createNumeberArray
+with an arbitrary array, and has a 100 ms timeout in the test case, which also throws an InterruptedException. Ideally, 
+this test case will then timeout and fail within 100 ms, and thus kill the mutant. However, in reality, sometimes this test
+case fails and kills the timeout mutant, and other times(other PIT runs) the mutant still times out.
+
+Adding these test cases to createNumberArray increased the mutation score from 80% to 90% or 100% (depending on if it timed
+out for that run or not)
+
+### `calculateColumnbTotal(Values2D,int)`
+The onloy surviving mutant for this class was the removal of the paramChecks.NullNotPermitted method call. Thus, a test 
+case was added that would pass a null argument to calculateColumnTotal, and would expect an IllegalArgumentException from
+the ParamChecks to be thrown. When this mutant is injected, the method would not throw this specific exception anymore, and
+therefore this test case will fail and kill this mutation.
+The test case added was `nullPermitTest()`, which passed a null values2D argument to calculateColumnTotal, and then assured
+that the illegal argument exception is thrown.
+This addition increased the mutation score for this class from 93.75% to 100%.
 
 ## Range test classes
 
@@ -280,6 +305,23 @@ asserts (with infinitesimal difference) that computed matches return exactly. An
 increase the mutation score for this method.
 
 After adding this test case, the hashCode() mutation score increased to **100%**.
+
+### `isNaNRange()`
+Once the original test class for the Range method isNaNRange() was run, only one mutation persisted. This mutation was the
+change the conditional in the return to true. 
+This mutation survives because no test case in the original class tested an expected false return from isNaNRange(), only
+checking true. Thus, adding a couple test cases where the Double.NaN value is employed and the assert expects false were
+added. These test cases were: 
+`test()` : Uses a range with 0/0 as lower bound and 90 as upper bound. Calls isNaNRange() and expects false, since only
+one boundary value is NaN. When the return(true) mutant is injected, this test case will then fail and kill this mutant.
+`test2()` : Uses a range with both boundaries as NaN (0/0 for both). Expects a return of true from isNaNRange, since
+the entire range is NaN. This new test case was not added to kill a surviving mutant, but rather added because this test
+case where both boundaries are NaN was not originally included in our test class. Thus, a potential mutant that PIT did not
+create could have survived without this test added.
+`test3()`: Similar to test(), but instead upper boundary is NaN. Asserts false for isNaNRange() return, and should now
+fail and kill the surviving mutant when return(true) is injected.
+
+Adding these test cases increased the mutation score of isNaNRange from 83.333% to 100%.
 
 # Analysis drawn on the effectiveness of each of the test classes
 
@@ -370,6 +412,7 @@ This functionality was tested with the `TestTradeIn` script. There are two test 
 both test cases worked as expected.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+Selenium unlike Sikulix accepts more languages, including Java which is what the test scripts were written in. Additionally the Selenium IDE is a much more graphicaly pleasing and easier to understand IDE compared to Sikulix. However it is very easy to add a screenshot or a portion of a screenshot using Sikulix unlike Selenium. Overall Selenium is a better choice due to it's simplicity and ease of use.
 
 
 # How the team work/effort was divided and managed

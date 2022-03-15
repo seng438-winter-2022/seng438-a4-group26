@@ -281,6 +281,23 @@ increase the mutation score for this method.
 
 After adding this test case, the hashCode() mutation score increased to **100%**.
 
+### `isNaNRange()`
+Once the original test class for the Range method isNaNRange() was run, only one mutation persisted. This mutation was the
+change the conditional in the return to true. 
+This mutation survives because no test case in the original class tested an expected false return from isNaNRange(), only
+checking true. Thus, adding a couple test cases where the Double.NaN value is employed and the assert expects false were
+added. These test cases were: 
+`test()` : Uses a range with 0/0 as lower bound and 90 as upper bound. Calls isNaNRange() and expects false, since only
+one boundary value is NaN. When the return(true) mutant is injected, this test case will then fail and kill this mutant.
+`test2()` : Uses a range with both boundaries as NaN (0/0 for both). Expects a return of true from isNaNRange, since
+the entire range is NaN. This new test case was not added to kill a surviving mutant, but rather added because this test
+case where both boundaries are NaN was not originally included in our test class. Thus, a potential mutant that PIT did not
+create could have survived without this test added.
+`test3()`: Similar to test(), but instead upper boundary is NaN. Asserts false for isNaNRange() return, and should now
+fail and kill the surviving mutant when return(true) is injected.
+
+Adding these test cases increased the mutation score of isNaNRange from 83.333% to 100%.
+
 # Analysis drawn on the effectiveness of each of the test classes
 
 Initially, as seen in the uploaded pictures, the DataUtilities class had a mutation score of 88% and Range had 68%. 

@@ -263,7 +263,26 @@ After adding this test case, the hashCode() mutation score increased to **100%**
 
 # Analysis drawn on the effectiveness of each of the test classes
 
+Initially, as seen in the uploaded pictures, the DataUtilities class had a mutation score of 88% and Range had 68%. 
+This indicates that the test classes for testing the DataUtilities class was relatively effective, as a large majority of
+injected faults/mutants were caught by these test cases. Similarly, the test cases for the range class were also effective, as 
+approximately two thirds of all injected mutants were effectively caught by our created test classes for Range.
+This fact indicates that the initial test classes from the previous assignment were relatively extensive and effective in 
+catching bugs. 
+After adding new test cases to the existing test classes, most classes were able to achieve 100% or near 100% mutation score. 
+This indicates that with a few added test cases for each class, the test classes were **very effective** at catching mutants, 
+and thus comprised a very precise test class, and thus very effective test cases for each method and the overall system under test.
+Overall, the initial mutation scores for both Range and DataUtilities was relatively high, indicating initially adequate test
+classes, and the test classes following some additional test cases achieved near 100% effectiveness in killing mutants, indicating
+a strong set of test cases.
+
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+The presence of equivalent mutations has an impact on the quantitative mutation score accuracy for mutation testing.
+Specifically, equivalent mutants make it where a block of code under test may actually have a higher mutation score in reality
+than the tool reports. This is due to the possible presence of equivalent mutations that the mutation tool does not avoid and 
+thus reports as multiple surviving mutants when in fact it is really one single logical mutant missed.
+
+...to be continued
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 

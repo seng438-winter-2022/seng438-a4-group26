@@ -155,15 +155,21 @@ test case would fail. This would kill this mutant. Therefore, this test case was
 the for loop in createnumberarray2d is mutated to an infinite loop. To kill this mutant, the test was designed to quickly timeout
 and throw a timeout exception when the for loop goes beyond 100 ms, thus killing the infinite loop mutant.
 @throws InterruptedException when timeout occurs.
+<br />
+The other remaining surviving mutant was the removal of ParamChecks.NullNotPermitted() call in this method. Without this call, the
+method would still return a null pointer exception, but not the IllegalArgument Exception that paramchecks would. Thus, a test
+case was required to be added that expected the illegal argument exception when this method call was removed. 
+<br />
+`increaseCreateNumberArray2D()` : Attempt to catch mutation where paramchecks.nullnotpermitted is removed. Kills mutant by passing
+null argument, and expecting the specific IllegalArgumentException that nullnotpermitted throws when null.
+<br />
 
-After this added test case, the mutation score was increased from **80% to 90%**.
-The remaining 10% is from the removal of the ParamChecks.NullNotPermitted() mutation, which was unable to be killed with any 
-additional test cases.
+After these added test cases, the mutation score was increased from **80% to 100%**.
+
 
 ### `CalculateRowTotal(Values2D, int, int[])`
 Initially, the mutation score for this was 90.47%. Two mutations survived. One surviving mutation was when the if(n!=null)
 was changed to if(true), and the other was removing the ParamChecks.NullNotPermitted() call. 
-The ParamChecks call was not easily killed by an additional test case, and thus was not killed by any new test cases.
 The if(n!=null)->if(true) was easily killed, however. Since all the exisiting test cases never had a cell that contained
 a null value in them (n), this if statement was always evaluated to true anyways. Thus, to kill the mutant a new test case had
 to be devised where n==null at some point, and thus the test case would fail. <br /> The created test case was: <br />
@@ -171,8 +177,22 @@ to be devised where n==null at some point, and thus the test case would fail. <b
 To catch this mutation, we make a test case where n (a cell value within the row we're calculating) is in fact equal to null, and 
 thus should never reach inside of the aforementioned if statement. Since the mutant will (if(true)), the computed value will 
 differ and thus the test case will fail, and the mutant killed. <br />
+As for the removal of paramchecks.nullnotpermitted(), a test case was created to ensure that when a null argument was passed
+to the method, it expected the specific IllegalArgumentException that ParamChecks would normally throw. 
+Thus, the test case added was: <br />
+`nullArgCalcRowTotal`: * Test to kill mutant where null not permitted is not called. Does this by passing null argument to 
+calculateRowTotal and then expecting the specific illegal arg exception.
+<br />
+Adding this test case increased the mutation score from **90.47% to 100%.**
 
-Adding this test case increased the mutation score from **90.47% to 95.24%.**
+### `CalculateRowTotal(Values2D, int)`
+Initially, this method had a mutation score of 93.75%. The single mutation that survived was when the ParamChecks.NullNotPermitted
+call was removed. Thus, a test case was created that would pass a null parameter to the method, and the test case would expect
+the IllegalArgumentException back from the method due to paramCheck. Thus, the added test case was: <br />
+`nullArgCalcRow()` :  Test to kill mutant where null not permitted is not called. Does this by passing null argument to 
+calculateRowTotal and then expecting the specific illegal arg exception.
+Adding this test case increased the mutation score to **100%**.
+
 
 ## Range test classes
 

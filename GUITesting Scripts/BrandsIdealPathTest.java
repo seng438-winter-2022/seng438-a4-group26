@@ -41,11 +41,15 @@ public class BrandsIdealPathTest {
     driver.get("https://www.bestbuy.ca/en-ca");
     driver.manage().window().setSize(new Dimension(1421, 1200));
     driver.findElement(By.cssSelector("li:nth-child(2) button > .white_3qh7k")).click();
-    driver.findElement(By.linkText("JBL")).click();
-    {
-      WebElement element = driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(1) .container_2eR50"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
+    try {
+      driver.findElement(By.linkText("JBL")).click();
+      {
+        WebElement element = driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(1) .container_2eR50"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
+      }
+    } catch (NoSuchElementException e) {
+      fail("Could not find JBL.");
     }
     js.executeScript("window.scrollTo(0,391)");
     {
@@ -58,7 +62,11 @@ public class BrandsIdealPathTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element).release().perform();
     }
-    driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(6) .sliderTarget_2Q87g:nth-child(1)")).click();
+    try {
+      driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(6) .sliderTarget_2Q87g:nth-child(1)")).click(); 
+    } catch (NoSuchElementException e) {
+      fail("Could not find JBL Flip 5.");
+    }
     js.executeScript("window.scrollTo(0,0)");
     js.executeScript("window.scrollTo(0,1)");
   }

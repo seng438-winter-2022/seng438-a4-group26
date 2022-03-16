@@ -51,12 +51,20 @@ public class DealsIdealPathTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
-    driver.findElement(By.cssSelector(".flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__")).click();
+    try {
+      driver.findElement(By.cssSelector(".flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__")).click();
+    } catch (NoSuchElementException e) {
+      fail("Cannot find 'Top Deals' in menu.");
+    }
     js.executeScript("window.scrollTo(0,79)");
     js.executeScript("window.scrollTo(0,354)");
     js.executeScript("window.scrollTo(0,762)");
     js.executeScript("window.scrollTo(0,1477)");
-    driver.findElement(By.cssSelector(".rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK")).click();
+    try {
+      driver.findElement(By.cssSelector(".rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK")).click();
+    } catch (NoSuchElementException e) {
+      fail("Cannot find Google Nest Doorbell.");
+    }
     js.executeScript("window.scrollTo(0,0)");
   }
 }

@@ -40,12 +40,18 @@ public class DealsByCategoryPathTest {
   public void dealsByCategoryPath() {
     driver.get("https://www.bestbuy.ca/en-ca");
     driver.manage().window().setSize(new Dimension(1539, 1241));
-    driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
-    {
-      WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
+
+    try {
+      driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
+      {
+        WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
+      }
+    } catch (NoSuchElementException e) {
+      fail("System could not find Deals box on home page.");
     }
+
     {
       WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
       Actions builder = new Actions(driver);
@@ -62,9 +68,17 @@ public class DealsByCategoryPathTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
-    driver.findElement(By.cssSelector(".col-xs-4_1EA1G:nth-child(2) .link_ldnKD")).click();
+    try {
+      driver.findElement(By.cssSelector(".col-xs-4_1EA1G:nth-child(2) .link_ldnKD")).click();
+    } catch (NoSuchElementException e) {
+      fail("Could not find category 'Smart Locks and Video Doorbells'.");//TODO: handle exception
+    }
     js.executeScript("window.scrollTo(0,0)");
-    driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(1) .productItemName_3IZ3c")).click();
+    try {
+      driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(1) .productItemName_3IZ3c")).click();
+    } catch (NoSuchElementException e) {
+      fail("Could not find Google Nest Doorbell.");
+    }
     js.executeScript("window.scrollTo(0,0)");
   }
 }

@@ -39,11 +39,21 @@ public class BrandsAlphabeticalPathTest {
   @Test
   public void brandsAlphabeticalPath() {
     driver.get("https://www.bestbuy.ca/en-ca");
-    driver.manage().window().setSize(new Dimension(1371, 1227));
+    driver.manage().window().maximize();
     driver.findElement(By.cssSelector("li:nth-child(2) button > span")).click();
-    driver.findElement(By.linkText("JBL")).click();
+    try {
+      driver.findElement(By.linkText("JBL")).click(); // check point after new page
+    } catch (NoSuchElementException e) {
+      fail("Cannot find JBL link.");
+    }
+
     js.executeScript("window.scrollTo(0,222)");
-    driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(6) .productItemName_3IZ3c")).click();
+    try {
+      driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(6) .productItemName_3IZ3c")).click(); // check point after new page
+    } catch (NoSuchElementException e) {
+      fail("Cannot find JBL Flip 5");
+    }
+
     js.executeScript("window.scrollTo(0,0)");
     js.executeScript("window.scrollTo(0,0)");
   }

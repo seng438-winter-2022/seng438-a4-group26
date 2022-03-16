@@ -41,16 +41,28 @@ public class DealsFullPathTest {
     driver.get("https://www.bestbuy.ca/en-ca");
     driver.manage().window().setSize(new Dimension(1556, 1232));
     driver.findElement(By.cssSelector("li:nth-child(3) button > span")).click();
-    driver.findElement(By.cssSelector(".flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__")).click();
+    try {
+      driver.findElement(By.cssSelector(".flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__")).click();
+    } catch (NoSuchElementException e) {
+      fail("Could not find Top Deals page from menu bar.");
+    }
     js.executeScript("window.scrollTo(0,472)");
     js.executeScript("window.scrollTo(0,1502)");
     js.executeScript("window.scrollTo(0,2433)");
     js.executeScript("window.scrollTo(0,3115)");
     js.executeScript("window.scrollTo(0,4041)");
     js.executeScript("window.scrollTo(0,4499)");
-    driver.findElement(By.cssSelector(".button_1Yg9v > .content_3Dbgg")).click();
+    try {
+      driver.findElement(By.cssSelector(".button_1Yg9v > .content_3Dbgg")).click();
+    } catch (NoSuchElementException e) {
+      fail("Could not find/click 'Show More' button.");
+    }
     js.executeScript("window.scrollTo(0,6324)");
-    driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(29) .productItemName_3IZ3c")).click();
+    try {
+      driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(29) .productItemName_3IZ3c")).click();
+    } catch (NoSuchElementException e) {
+      fail("Cannot find Google Nest Doorbell.");
+    }
     js.executeScript("window.scrollTo(0,0)");
   }
 }

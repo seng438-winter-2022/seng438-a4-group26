@@ -40,11 +40,15 @@ public class DealsPromotionPathTest {
   public void dealsPromotionPath() {
     driver.get("https://www.bestbuy.ca/en-ca");
     driver.manage().window().setSize(new Dimension(1525, 1263));
-    driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(3) .content_3Dbgg")).click();
-    {
-      WebElement element = driver.findElement(By.cssSelector(".column_3St0Y:nth-child(3) .offerTitle_K08-I"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
+    try {
+      driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(3) .content_3Dbgg")).click();
+      {
+        WebElement element = driver.findElement(By.cssSelector(".column_3St0Y:nth-child(3) .offerTitle_K08-I"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
+      }
+    } catch (NoSuchElementException e) {
+      fail("Could not find Top Deals box on home page.");
     }
     js.executeScript("window.scrollTo(0,80)");
     {
@@ -54,7 +58,11 @@ public class DealsPromotionPathTest {
     }
     js.executeScript("window.scrollTo(0,778)");
     js.executeScript("window.scrollTo(0,1415)");
-    driver.findElement(By.cssSelector(".rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK")).click();
+    try {
+      driver.findElement(By.cssSelector(".rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK")).click();
+    } catch (NoSuchElementException e) {
+      fail("Could not find Google Nest Doorbell.");
+    }
     js.executeScript("window.scrollTo(0,0)");
   }
 }

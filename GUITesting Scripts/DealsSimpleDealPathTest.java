@@ -40,18 +40,27 @@ public class DealsSimpleDealPathTest {
   public void dealsSimpleDealPath() {
     driver.get("https://www.bestbuy.ca/en-ca");
     driver.manage().window().setSize(new Dimension(1658, 1189));
-    driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
-    {
-      WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
+    try {
+      driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
+      {
+        WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
+      }
+      {
+        WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
+      }
+    } catch (NoSuchElementException e) {
+      fail("Cannot find Deals box on home page.");
     }
-    {
-      WebElement element = driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
+
+    try {
+      driver.findElement(By.cssSelector(".slick-slide:nth-child(7) .truncate_gQkhK:nth-child(1)")).click();
+    } catch (NoSuchElementException e) {
+      fail("Could not find Google Nest Doorbell.");
     }
-    driver.findElement(By.cssSelector(".slick-slide:nth-child(7) .truncate_gQkhK:nth-child(1)")).click();
     js.executeScript("window.scrollTo(0,0)");
   }
 }

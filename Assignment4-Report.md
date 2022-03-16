@@ -387,21 +387,21 @@ this functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndM
 of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the website should have simply reset the product list page to what it was before the price filter but it actually brought an Error 404. 
 
 ## Functionality 5. Find a product through the "Brands" tab  
-This functionality is tested in individual scripts. THis script searches through JBL to find the *JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black*. There are 2 cases for this functionality:
+This functionality is tested in the `SearchByBrandsTest.java` file. THis script searches through JBL to find the *JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black*. There are 2 cases for this functionality:
 
-1. `BrandsIdealPathTest.java` which looks for the most ideal path from the home page to find a product through the brands tab.
-2. `BrandsAlphabeticalPathTest.java` which uses the brands tab then goes alphabetically instead of using popular brands.
+1. `BrandsIdealPathTest` which looks for the most ideal path from the home page to find a product through the brands tab.
+2. `BrandsAlphabeticalPathTest` which uses the brands tab then goes alphabetically instead of using popular brands.
 
 Note, because this test uses the popular brands tab, there is a chance that this changes since inception of the tests.
 
 ## Functionality 6. Find a product through the "Top Deals" tab 
-This functionality is tested in individual scripts. The item to be found was the *Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White*. There are 5 cases for this functionality:
+This functionality is tested in `TopDealsTest.java`. The item to be found was the *Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White*. There are 5 cases for this functionality:
 
-1. `DealsIdealPathTest.java` which takes the most direct path using the menu bar to find a featured item.
-2. `DealsPromotionPathTest.java` which uses the home page promotion box for "Top Deals" as a way to navigate.
-3. `DealsFullPathTest.java` which will use the menu bar and scoll all the way down to the full list of features to find an item.
-4. `DealsSimpleDealPathTest.java` which uses the home page "Shop Deals" box which directs you to all deals with top deals advertised at the top.
-5. `DealsByCategoryPathTest.java` using simple deals but then sorting by category of smart home to find the item.
+1. `DealsIdealPathTest` which takes the most direct path using the menu bar to find a featured item.
+2. `DealsPromotionPathTest` which uses the home page promotion box for "Top Deals" as a way to navigate.
+3. `DealsFullPathTest` which will use the menu bar and scoll all the way down to the full list of features to find an item.
+4. `DealsSimpleDealPathTest` which uses the home page "Shop Deals" box which directs you to all deals with top deals advertised at the top.
+5. `DealsByCategoryPathTest` using simple deals but then sorting by category of smart home to find the item.
 
 It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until ready to hand in.
 

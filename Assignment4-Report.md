@@ -422,7 +422,33 @@ be redirected back with error messages. The checkpoints are:
 <br />
 <br />
 These tests all passed, suggesting that there are no defects for the registration aspect of the website. However, if a
-user is already logged in before any of these tests run, these test cases will not work.
+user is already logged in before any of these tests run, these test cases will not work. <br />
+
+## Functionality 2. login 
+In this test, we tested the login of an account on the BestBuy website. There were 3 test cases for this. 
+
+`test2valid`
+ I tested the login with a valid username and pasword. Therefore, I logged in with a valid account that was made beforehand. I expected no errors, and for a successful login. 
+The checkpoints are: 
+(1) verify the text "Sign In" is there
+(2) Verify the username entry is editable
+(3) Verify the sign in button is present
+(4)Verify the text "Hi, j!" is displayed after log in
+
+`test2invalid`
+In this test case, I tested logging in with a valid username/email, but put in an invalid password that also didn't fit the required criteria for a password, since it was too short. The website required a password be a certain length, and I purposely made it shorter than such. It also required characters that the enetred password was purposely missing. 
+The checkpoints are: 
+(1) verify the text "Sign In" is displayed
+(2) verify the sign in button is present
+(3)verify text displaying "Please enter your password. It must be 6 to 30 characters and contain at least one number and one letter.
+
+`test2invalid2`
+In this test, I tested the log in with a valid email/username, but purposely used an invalid password. This time, the password fit the criteria for a valid password, but it simply was the wrong password for the account I made. Therefore, the password was between 6-30 characters, and included a number, and a letter.
+The checkpoints are:
+(1) verify text displaying "Sign In" is there
+(2) verify password entry bar is editable
+(3) Verify sign in button is present 
+(4) verify text displaying "Sorry, the e-mail address and password you entered don’t match. Please try again." is present
 
 ## Functionality 3. Find a product through search
 This functionality was tested in the test suite `SearchTests` and has 4 test cases: `SearchIPadPro11`, 

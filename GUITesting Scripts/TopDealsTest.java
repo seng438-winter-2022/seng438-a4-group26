@@ -45,39 +45,14 @@ public class TopDealsTest {
   public void dealsByCategoryPath() throws InterruptedException {
     driver.get("https://www.bestbuy.ca/en-ca");
     driver.manage().window().maximize();
-
-    try {
-      driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
-      Thread.sleep(5000);
-      wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")));
-      driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")).click();    
-    } catch (NoSuchElementException e) {
-      fail("System could not find Deals box on home page.");
-    }
-    
-    Thread.sleep(2000);
-    driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")).click();
-    
-    Thread.sleep(2000);
-    driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")).click();
-
+    driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
+    Thread.sleep(3000);
     js.executeScript("window.scrollTo(0,93)");
-    {
-      WebElement element = driver.findElement(By.tagName("body"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element, 0, 0).perform();
-    }
-    try {
-      driver.findElement(By.cssSelector(".col-xs-4_1EA1G:nth-child(2) .link_ldnKD")).click();
-    } catch (NoSuchElementException e) {
-      fail("Could not find category 'Smart Locks and Video Doorbells'.");//TODO: handle exception
-    }
+    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".col-xs-4_1EA1G:nth-child(1) .link_ldnKD")));
+    driver.findElement(By.cssSelector(".col-xs-4_1EA1G:nth-child(1) .link_ldnKD")).click();
+    Thread.sleep(2000);
     js.executeScript("window.scrollTo(0,0)");
-    try {
-      driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(1) .productItemName_3IZ3c")).click();
-    } catch (NoSuchElementException e) {
-      fail("Could not find Google Nest Doorbell.");
-    }
+    driver.findElement(By.cssSelector(".col-xs-12_198le:nth-child(1) .productItemName_3IZ3c")).click();
     js.executeScript("window.scrollTo(0,0)");
   }
 
@@ -178,11 +153,6 @@ public class TopDealsTest {
     try {
       driver.findElement(By.cssSelector(".contentContainer_3jS31:nth-child(4) .content_3Dbgg")).click();
       Thread.sleep(2000);
-      wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")));
-      driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")).click();
-      Thread.sleep(2000);
-      // wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")));
-      // driver.findElement(By.cssSelector(".slick-slide:nth-child(10) .col-xs-12_198le:nth-child(2)")).click();
     } catch (NoSuchElementException e) {
       fail("Cannot find Deals box on home page.");
     }

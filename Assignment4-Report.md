@@ -428,6 +428,7 @@ user is already logged in before any of these tests run, these test cases will n
 In this test, we tested the login of an account on the BestBuy website. There were 3 test cases for this. 
 
 `test2valid`
+**ENSURE YOU ARE LOGGED OUT BEFORE TEST CASE**
  I tested the login with a valid username and pasword. Therefore, I logged in with a valid account that was made beforehand. I expected no errors, and for a successful login. 
 The checkpoints are: 
 (1) verify the text "Sign In" is there
@@ -436,6 +437,7 @@ The checkpoints are:
 (4)Verify the text "Hi, j!" is displayed after log in
 
 `test2invalid`
+**ENSURE YOU ARE LOGGED OUT BEFORE TEST CASE**
 In this test case, I tested logging in with a valid username/email, but put in an invalid password that also didn't fit the required criteria for a password, since it was too short. The website required a password be a certain length, and I purposely made it shorter than such. It also required characters that the enetred password was purposely missing. 
 The checkpoints are: 
 (1) verify the text "Sign In" is displayed
@@ -443,6 +445,7 @@ The checkpoints are:
 (3)verify text displaying "Please enter your password. It must be 6 to 30 characters and contain at least one number and one letter.
 
 `test2invalid2`
+**ENSURE YOU ARE LOGGED OUT BEFORE TEST CASE**
 In this test, I tested the log in with a valid email/username, but purposely used an invalid password. This time, the password fit the criteria for a valid password, but it simply was the wrong password for the account I made. Therefore, the password was between 6-30 characters, and included a number, and a letter.
 The checkpoints are:
 (1) verify text displaying "Sign In" is there
@@ -513,7 +516,50 @@ This functionality is tested in `TopDealsTest.java`. The item to be found was th
 4. `DealsSimpleDealPathTest` which uses the home page "Shop Deals" box which directs you to all deals with top deals advertised at the top.
 5. `DealsByCategoryPathTest` using simple deals but then sorting by category of smart home to find the item.
 
-It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until ready to hand in.
+It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until ready to hand in. <br />
+
+## Functionality 7. add product to shopping cart, then view cart
+In this, we wanted to test that we can add products to the cart before paying, and also view the shopping cart. 
+
+`test7valid`
+**ENSURE CART IS EMPTY ON FIREFOX BEFORE RUNNING TEST**
+In this test case, we added airpod pros to the shopping cart, and then viewed the cart. This test case was a valid test for this functionality.
+the checkpoints are:
+(1) verify the search bar is editable
+(2) verify the text saying "Search for "airpod pro"" is properly displayed
+(3) verify the add to cart button is present
+(4) verify test saying "This item has been added to your cart." displays
+(5) verify go to cart button is present
+(6) verify text displaying total price is displayed
+
+`test7remove`
+**ENSURE CART IS EMPTY ON FIREFOX BEFORE RUNNING TEST**
+In this test case, we add a product to the cart, and then go to the cart, and remove the item.
+The checkpoints are:
+(1) verify text saying "Search for "airpod pro"" is displayed
+(2) verify text displaying "Apple AirPods Pro In-Ear Noise Cancelling Truly Wireless Headphones with MagSafe Charging Case - White" is showed
+(3) verify add to cart button is present
+(4) verify text displaying "This item has been added to your cart."
+(5) verify go to cart button is present
+(6) verify text displaying "Your Cart"
+(7) verify text ""Apple AirPods Pro In-Ear Noise Cancelling Truly Wireless Headphones with MagSafe Charging Case - White" has been removed from your cart."
+
+`test7empty`
+**ENSURE CART IS EMPTY ON FIREFOX BEFORE RUNNING TEST**
+In this test case, we simply checked the cart after not adding any product. Therefore, we checked our empty shopping cart.
+The checkpoints are:
+(1) verify shopping cart icon button in the top right is present
+(2) verify text containing "Looks like it's empty!" is displayed
+
+`test7continueshopping`
+**ENSURE CART IS EMPTY ON FIREFOX BEFORE RUNNING TEST**
+In this test case, we added airpod pros to our shopping cart, and then checked the shopping cart, before pressing continue shopping
+The checkpoints are:
+(1) verify text "Search for "airpod pro""
+(2) verify add to cart button is present
+(3) verify text displaying "This item has been added to your cart."
+(4) verify continue shopping button is present
+
 
 ## Functionality 8. Use the trade in program UI under the "Servicecs" tab
 This functionality was tested with the `TestTradeIn` script. There are two test cases for this functionality:

@@ -1,0 +1,584 @@
+{
+  "id": "6ae19379-e014-4d19-8586-60009354a6ec",
+  "version": "2.0",
+  "name": "SENG438A4",
+  "url": "https://www.bestbuy.ca",
+  "tests": [{
+    "id": "d9f9d0b6-a9c8-4054-bd2a-a867a89f46ad",
+    "name": "DealsIdealPath",
+    "commands": [{
+      "id": "4557d873-495b-474c-8837-57d2dadc6c1a",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e5c7863-8b2e-409c-abee-f04cd6bca14c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1494x1277",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "204f571f-fa48-42b7-9bf4-6416f1a86a1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) button > span",
+      "targets": [
+        ["css=li:nth-child(3) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[3]/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[3]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fc06771-0037-446e-b6af-808a85bf6065",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__",
+      "targets": [
+        ["css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[3]/div/div[2]/div/ul/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Top Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f2e9307-9b0d-4366-a544-f98c9372f5d8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Top Deals: Weekly Flyer | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba637466-2ef8-44c9-acbd-4d13979e6084",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1477)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b5eb5b2-8c7d-4ba4-b67f-2156b147b03e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK",
+      "targets": [
+        ["css=.rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK", "css:finder"],
+        ["xpath=//section[@id='by_grid']/div/div/ul/li[8]/div/a/div/div/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//li[8]/div/a/div/div/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43b00534-e685-4669-af34-947820cae27a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e387b99-56e7-469d-85a3-c33f99a25078",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "680a7030-993a-4146-8a0e-e1fd561b1b13",
+    "name": "DealsSmartHomePromotionPath",
+    "commands": [{
+      "id": "e137ab84-5037-4b7b-83ab-abf9a79b685f",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8bf9a48-eda5-4fba-be5a-3e91f7b0173a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1525x1263",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a75ed634-505a-433e-a7f1-8fb60a7893fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.contentContainer_3jS31:nth-child(3) .content_3Dbgg",
+      "targets": [
+        ["css=.contentContainer_3jS31:nth-child(3) .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div/div/div[2]/section[2]/div/section[3]/div/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//section[3]/div/div[2]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea743dba-6a46-4acf-9b5b-7027df5f4be1",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Top Deals: Weekly Flyer | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7acad697-9b01-4275-a3b2-876078058d0e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1415)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "147988c8-dd9e-4015-9e35-7582eac28a7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK",
+      "targets": [
+        ["css=.rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK", "css:finder"],
+        ["xpath=//section[@id='by_grid']/div/div/ul/li[8]/div/a/div/div/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//li[8]/div/a/div/div/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b29199b-4fe3-40d2-9ac9-6d9310d99fe6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e6bdd6f-dd56-49bd-a322-02bd15eff84e",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b52fc822-b3d9-4f49-bd55-374bd5255caa",
+    "name": "DealsFullPath",
+    "commands": [{
+      "id": "e41876db-41c1-47e1-839a-b7aaea22ffa1",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e98db44-5b90-4201-8bba-f7325271fc95",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1556x1232",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "808544cc-a180-4c9c-b339-d59410878e52",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) button > span",
+      "targets": [
+        ["css=li:nth-child(3) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[3]/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[3]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19cd2e06-da0c-4594-8a85-c8a2d9ec3afb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__",
+      "targets": [
+        ["css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[3]/div/div[2]/div/ul/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Top Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d3484e7-8c7c-4817-b8ac-33dc5a079e53",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Top Deals: Weekly Flyer | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6dd4d62d-015b-4c4f-8049-f1518970ebb3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4499)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3032dec6-7dd2-49bc-abbf-dd0d38f55999",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button_1Yg9v > .content_3Dbgg",
+      "targets": [
+        ["css=.button_1Yg9v > .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//main/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Show more')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c68ee4b-d160-4578-8963-1c057ee8c87e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,6324)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30d8f137-2fa8-461f-9a01-20914821a204",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rowSkuList_22-Vn > .productItemContainer_1KkmO:nth-child(8) .truncate_gQkhK",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(29) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div[2]/div[2]/ul/div/div[29]/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[29]/div/a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81652114-bcd8-4095-87c8-5712dc93d558",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82c8fdfc-af72-4142-b342-39eb3fda7c8f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4efcf965-df3c-407f-b7fe-1991ea45ab4d",
+    "name": "DealsSimpleDealPath",
+    "commands": [{
+      "id": "3b865ba1-5bd5-4d27-8bf4-60b694b9dcbe",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa0042fa-bf6f-4571-946a-af9fe108addb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1658x1189",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "600a1f12-14aa-420f-8b3b-108bca359772",
+      "comment": "",
+      "command": "click",
+      "target": "css=.contentContainer_3jS31:nth-child(4) .content_3Dbgg",
+      "targets": [
+        ["css=.contentContainer_3jS31:nth-child(4) .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div/div/div[2]/section[2]/div/section[4]/div/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div[2]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78cb16b0-284c-49ff-a38f-defaff107b42",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Smart Home On Sale | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b974cae-d5e3-4ae0-8424-11a93d90cce8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.slick-slide:nth-child(7) .truncate_gQkhK:nth-child(1)",
+      "targets": [
+        ["css=.slick-slide:nth-child(7) .truncate_gQkhK:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[3]/div/div/ul/div/div/div/div[7]/div/li/div/a/div/div/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/li/div/a/div/div/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01b77089-6bc1-4f71-bfe8-eb4516679cc0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9609756-530b-435f-aad1-f85ed114a17a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3bf76cc9-f8bf-4aac-b0b6-730cd47c4670",
+    "name": "DealsSmartHomeByCategoryPath",
+    "commands": [{
+      "id": "e9bd57f4-b49e-49fe-81d6-a249bbdd195a",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18b26cd3-ff30-4e5d-a6b9-49e3619c340b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1539x1241",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64f026e0-27c5-4126-9410-342eaf409e43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.contentContainer_3jS31:nth-child(4) .content_3Dbgg",
+      "targets": [
+        ["css=.contentContainer_3jS31:nth-child(4) .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div/div/div[2]/section[2]/div/section[4]/div/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div[2]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "daabd38a-a82b-428c-bc4e-11d64d3ef9d0",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Smart Home On Sale | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfdbca19-a86f-4bb6-9fb5-b6bce3dcef35",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,93)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25c1084d-7bb5-4466-a16e-2ac6206c7169",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(2) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(2) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[4]/div/div/div[2]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Smart Locks and Video Doorbells')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9d8d205-ae54-4235-bf81-d8001267ae4c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Smart Locks and Doorbells On Sale | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13d55f1c-5a6e-4f77-bfd6-dfac437eee8b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c28885ea-ab45-4c9e-936b-b05254339a12",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div[2]/div[2]/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61ff3518-9b67-4f23-8ea5-211012fb52b5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f8cd312-60a9-42c9-bb03-6e1527915797",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Google Nest Doorbell (Wired) Wi-Fi Video Doorbell - Black/White | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "59eecb21-892b-4fdb-b900-3815ff780f94",
+    "name": "BrandsAlphJBL",
+    "commands": [{
+      "id": "9c44fc93-677f-45da-bd75-00aaee304f38",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dd6a6cd-23db-4fa2-b19c-175f09272d0f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cba9317b-9dc6-4bf4-80ae-e89e38909e0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) button > span",
+      "targets": [
+        ["css=li:nth-child(2) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[2]/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Brands')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "564f9d2a-4a9c-47c7-b882-3b3371eef5ba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=JBL",
+      "targets": [
+        ["linkText=JBL", "linkText"],
+        ["css=.visible_2kiOM li:nth-child(18) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'JBL')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[2]/div/div[2]/div/div[4]/ul/li[18]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/en-ca/brand/jbl')])[2]", "xpath:href"],
+        ["xpath=//div[4]/ul/li[18]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0b7e34d-0f4d-46a5-804e-3ab2f70f5e89",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "JBL - Speakers, Headphones, Sound Bars & more | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "586e62c9-923e-4e94-8823-f3ea0214bfc8",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,709)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2192a526-4d0c-4394-8efe-d73403e10a5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(7) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(7) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/main/div/div[3]/div[2]/div[2]/ul/div/div[7]/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36522836-ee8a-484a-b833-31178989fa5c",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "54564fa2-2ca8-46d1-acda-a9e992b9f9a6",
+    "name": "BrandsIdealJBL",
+    "commands": [{
+      "id": "7ef2cf10-3bdc-47b5-ab06-0adc44dc553a",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c046067-01fb-433a-ae33-2cdecede545d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74248d52-7682-47d0-9421-4285b1f33c65",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) button > .white_3qh7k",
+      "targets": [
+        ["css=li:nth-child(2) button > .white_3qh7k", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad1c0a4f-b329-4d8d-9125-ceaaea9521a5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=JBL",
+      "targets": [
+        ["linkText=JBL", "linkText"],
+        ["css=.visible_2kiOM li:nth-child(18) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'JBL')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[2]/div/div[2]/div/div/ul/li[18]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca/brand/jbl')]", "xpath:href"],
+        ["xpath=//li[18]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'JBL')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "883d2871-fccf-4459-a25a-909b77ed02a5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "JBL - Speakers, Headphones, Sound Bars & more | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97872267-d35a-4f5a-a22d-c0262f7ee173",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,529)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cafda7d-a5b4-438b-b719-28ab25728693",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(7) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(7) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/main/div/div[3]/div[2]/div[2]/ul/div/div[7]/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74dca874-fd53-4df2-bdf7-3d0f6322eabb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74ff693e-7c6d-40ce-99fd-9b49dd42ec11",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9fef2b8c-b677-42e7-8d45-32ef7d549458",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.bestbuy.ca/"],
+  "plugins": []
+}

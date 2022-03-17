@@ -500,10 +500,10 @@ Of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the 
 	Checkpoint 4 verifies that the Graphics Cards with NVidia Chipset page was reached </br>
 
 ## Functionality 5. Find a product through the "Brands" tab  
-This functionality is tested in the `SearchByBrandsTest.java` file. THis script searches through JBL to find the *JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black*. There are 2 cases for this functionality:
+This functionality is tested in the `TopDealsAndBrandsSearch.side` file. THis script searches through JBL to find the *JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black*. There are 2 cases for this functionality:
 
-1. `BrandsIdealPathTest` which looks for the most ideal path from the home page to find a product through the brands tab.
-2. `BrandsAlphabeticalPathTest` which uses the brands tab then goes alphabetically instead of using popular brands.
+1. `BrandsIdealJBL` which looks for the most ideal path from the home page to find a product through the brands tab.
+2. `BrandsAlphJBL` which uses the brands tab then goes alphabetically instead of using popular brands.
 
 Note, because this test uses the popular brands tab, there is a chance that this changes since inception of the tests.
 

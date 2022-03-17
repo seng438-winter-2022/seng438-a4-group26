@@ -379,6 +379,41 @@ Checkpoints and assertions are vital in GUI testing. Checkpoints catch early tes
 
 # How did you test each functionaity with different test data
 
+## Functionality 3. Find a product through search
+This functionality was tested in the test suite `SearchTests` and has 4 test cases: `SearchIPadPro11`, 
+`testSearchwithAutoFill`, `findIPhoneWithFilters`, and `testSequentialSearch`. <br />
+`SearchIPadPro11` searches for an IPad Pro 11 and then selects an IPad Pro 11 from the search results. The verification
+checkpoints are: verify the title of the home page, verify search bar is editable, verify new title after search is
+Results for: ipad pro 11 | Best Buy Canada, verify text Search for "ipad pro 11", verify new title Apple iPad Pro 11" 
+128GB with Wi-Fi (3rd Generation) - Space Grey | Best Buy Canada after clicking product and finally verify text Apple iPad 
+Pro 11" 128GB with Wi-Fi (3rd Generation) - Space Grey. <br />
+`testSearchwithAutoFill` tests that the autofill of the search works, and that pressing this will bring you to the desired 
+product. It types 'ipad cas' and then clicks the autocomplete suggested ipad cases, then it clicks on the OtterBox 
+Defender Rugged Case for iPad 10.2" - Black | Best Buy Canada product. 
+This test case first verifies that the search bar is editable, then that the title of the page after clicking the 
+auto complete is: Results for: ipad cases | Best Buy Canada, then verifies the title of the selected product and that 
+the addToCartLabel is present. <br />
+`findIPhoneWithFilters` : tests that a search for phone and then using the filters can get to iPhone 13. <br />
+Checkpoints are: <br />
+	(1) verify search bar editable
+	(2) verify title is Results for: phone | Best Buy Canada following the search
+	(3) verify filter button present
+	(4) verify title is Results for: phone | Best Buy Canada after all filtering
+	(5) verify iphone 13 is element is present on page <br />
+`testSequentialSearch` tests that multiple concurrent searches is supported. It first searches for and selects a 
+playstation 4, then searches and selects a ps4 controller. <br />
+The checkpoints are: <br />
+	(1) verify search bar editable
+	(2) verify Playstation 4 text present after searching for it and entering
+	(3) verify title is: PS4: Consoles, Games & Accessories | Best Buy Canada, after searching for it
+	(4) verify title is: PlayStation 4 1TB Console | Best Buy Canada, after selecting this item
+	(5) verify text Search for "playstation 4 controller", after searching for this after previous checkpoint
+	(6) verify title: PlayStation 4 DualShock 4 Wireless Controller - Jet Black | Best Buy Canada, after selecting
+	the controller
+	(7) verify text "Product Details" to ensure that we are actually on the product's page <br />
+These verification checkpoints ensure that the proper order step by step is properly followed. <br />
+There were no defects found for testing the search functionalities, as all tests passed on Selenium IDE. 
+
 ## Functionality 4. Find a product through the "Shop" tab
 this functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndModelFilters` script. There are three test cases for this functionality:
 `idealPathTest` - the ideal path using the shop tab to find a certain product

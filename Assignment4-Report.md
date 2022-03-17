@@ -332,12 +332,19 @@ approximately two thirds of all injected mutants were effectively caught by our 
 This fact indicates that the initial test classes from the previous assignment were relatively extensive and effective in 
 catching bugs. 
 
+![](media/Initial-PIT-Summary.png)  
+Figure 1. The Inital PIT summary
+
+
 After adding new test cases to the existing test classes, most classes were able to achieve 100% or near 100% mutation score. 
 This indicates that with a few added test cases for each class, the test classes were **very effective** at catching mutants, 
 and thus comprised a very precise test class, and thus very effective test cases for each method and the overall system under test.
 Overall, the initial mutation scores for both Range and DataUtilities was relatively high, indicating initially adequate test
 classes, and the test classes following some additional test cases achieved near 100% effectiveness in killing mutants, indicating
-a strong set of test cases.
+a strong set of test cases. Range now has a mutation score of 79% an increase of 11%, DataUtilites now has a mutation score of 94% an increase of 6%. DataUtilites did not manage to acheive the 10% desired increase, however, a mutation score of 94% is very high and due to the limitations of time a true exhastive testing would not be feasable. 
+
+![](media/Final-PIT-Summary.png)  
+Figure 2. The Final PIT summary
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 The presence of equivalent mutations has an impact on the quantitative mutation score accuracy for mutation testing.
@@ -415,11 +422,15 @@ These verification checkpoints ensure that the proper order step by step is prop
 There were no defects found for testing the search functionalities, as all tests passed on Selenium IDE. 
 
 ## Functionality 4. Find a product through the "Shop" tab
-this functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndModelFilters` script. There are three test cases for this functionality:
-`idealPathTest` - the ideal path using the shop tab to find a certain product
-`enterCharIntoNumFieldTest` - a char is entered into the price range enter box when filtering for the product
-`enterInvalidRangeIntoNumFieldTest` - the price range enter box receives an invalid range of min=4000 and max=2500
-of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the website should have simply reset the product list page to what it was before the price filter but it actually brought an Error 404. 
+This functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndModelFilters` script. There are three test cases for this functionality:  
+`idealPathTest` - the ideal path using the shop tab to find a certain product, the exact path is click shop tab, click Computers and Tablets, click PC Components, click Graphics Cards, Click NVidia Graphics Cards, filter by Model "RTX 3090", filter by Price range $2500-$4000, select the first product    
+`enterCharIntoNumFieldTest` - a char is entered into the price range enter box when filtering for the product  
+`enterInvalidRangeIntoNumFieldTest` - the price range enter box receives an invalid range of min=4000 and max=2500  
+Of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the website should have simply reset the product list page to what it was before the price filter but it actually brought an Error 404. There are four checkpoints in this test suite. <br>
+	Checkpoint 1 verifies that the Computers and Tablets page was reached. 
+	Checkpoint 2 verifies that the PC Components page was reached  
+	Checkpoint 3 verifies that the Graphics Cards page was reached  
+	Checkpoint 4 verifies that the Graphics Cards with NVidia Chipset page was reached </br>
 
 ## Functionality 5. Find a product through the "Brands" tab  
 This functionality is tested in the `SearchByBrandsTest.java` file. THis script searches through JBL to find the *JBL Flip 5 Waterproof Bluetooth Wireless Speaker - Black*. There are 2 cases for this functionality:
@@ -443,10 +454,13 @@ It is important to note that top deals will likely change frequently and these t
 ## Functionality 8. Use the trade in program UI under the "Servicecs" tab
 This functionality was tested with the `TestTradeIn` script. There are two test cases for this functionality:
 
-`IdealPathTest` - the ideal path for the trade in calculator
+`IdealPathTest` - the ideal path for the trade in calculator, that is, click on the Services tab, click on Trade-In Program, click on IPhone, switch to the newly opened tab, select IPhone 12 128GB, change carrier to Virgin Mobile, click Get Estimate
 
-`selectAPhoneThenSwitchBrand` - switch the phone brand after selecting a phone to see if the phone would be reset
-both test cases worked as expected.
+`selectAPhoneThenSwitchBrand` - switch the phone brand to BlackBerry after selecting IPhone 128GB to see if the phone would be reset  
+This test suite has two checkpoints: <br>
+	Checkpoint 1 verifies that the Trade-In Program page is displayed
+	Checkpoint 2 verifies that the new tab was opened </br>
+Both test cases worked without issue. This functionality is difficult to design multiple test data for as the only manipulation involves two selection boxes at most. 
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 Selenium unlike Sikulix accepts more languages, including Java which is what the test scripts were written in. Additionally the Selenium IDE is a much more graphicaly pleasing and easier to understand IDE compared to Sikulix. However it is very easy to add a screenshot or a portion of a screenshot using Sikulix unlike Selenium. Overall Selenium is a better choice due to it's simplicity and ease of use.
@@ -469,5 +483,6 @@ Additionally, the GUI testing was quite long and had to be a combination of the 
 We also had difficulties with the mutation test report in identifying what local variable X was and resulted in some guess work.
 # Comments/feedback on the lab itself
 The pit mutation tool required a lot of time to run on your code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. We also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. We also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.
+Additionally with the PIT mutations, they significantly increase thermal output of laptops, in excess of 100C CPU temperatures for long periods of time. This severely degrades their lifespan.
 
 As mentioned above, GUI testing was quite time extensive and required manual as well as automatic recording. It may have been nice to have a common debugging list of things that the recording may not properly pick up that would need to be modified manually in code so that we knew what to look for.

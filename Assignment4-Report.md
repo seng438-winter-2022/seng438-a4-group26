@@ -386,6 +386,44 @@ Checkpoints and assertions are vital in GUI testing. Checkpoints catch early tes
 
 # How did you test each functionaity with different test data
 
+## Functionality 1. Register a new account
+This functionality was tested using four different test cases. <br />
+<br />
+**NOTE: the following test cases only work if no one is already logged in to bestbuy.ca previously**
+<br />
+`testRegisterValid` ensures that a new account can be registered. Due to the fact that once an account is registered it cannot be re-registered(thus this test case
+can only ever be ran once), the test case was modified for reusability. The test case first verifies that the sign in /sign out button is present, then it clicks it, then it verifies that the create an account button is present. These
+steps ensure that a user has the ability to register an account, but doesn't fully go through due to the aforementioned reusability issue of the test case. Thus, it tests that the website allows for user registration.
+
+<br />
+`testRegisterInvalid` tests the functionality of registering a user with invalid parameters, expecting that the site
+will not register the user and give error messages to the user. The checkpoints for this test are:
+(1) verify account button is present and then create an account is present
+(2) verify that the registration fields are all editable
+(3) verify validation error message when invalid email entered
+(4) verify create account button present
+(5) verify error message for both password and email address are present
+(6) verify that the create account button is still present (ie. didn't continue with registration)
+<br />
+`testRegisterAlreadyExists` tests for when a user attempts to register with an email that already has an account registered. It expects that the website does not register this account again and gives a message to the user.
+The checkpoints for this test are:
+(1) verify account button present
+(2) verify create an account present
+(3) verify create account button present
+(4) verify text: An account with this email address already exists. Please use it to sign in or enter a new email to continue.
+<br />
+`testRegisterEmpty`: tests a registration where the user supplies zero entry. Expects no registration to occur and to 
+be redirected back with error messages. The checkpoints are: 
+(1) Verify account button present
+(2) Verify create an account link present
+(3) Verify create account button present
+(4) Verify error messages text for all required fields
+(5) Verify create account button still present (ie. redirected back and didn't actually register empty user)
+<br />
+<br />
+These tests all passed, suggesting that there are no defects for the registration aspect of the website. However, if a
+user is already logged in before any of these tests run, these test cases will not work.
+
 ## Functionality 3. Find a product through search
 This functionality was tested in the test suite `SearchTests` and has 4 test cases: `SearchIPadPro11`, 
 `testSearchwithAutoFill`, `findIPhoneWithFilters`, and `testSequentialSearch`. <br />

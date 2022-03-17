@@ -341,10 +341,12 @@ This indicates that with a few added test cases for each class, the test classes
 and thus comprised a very precise test class, and thus very effective test cases for each method and the overall system under test.
 Overall, the initial mutation scores for both Range and DataUtilities was relatively high, indicating initially adequate test
 classes, and the test classes following some additional test cases achieved near 100% effectiveness in killing mutants, indicating
-a strong set of test cases. Range now has a mutation score of 79% an increase of 11%, DataUtilites now has a mutation score of 94% an increase of 6%. DataUtilites did not manage to acheive the 10% desired increase, however, a mutation score of 94% is very high and due to the limitations of time a true exhastive testing would not be feasable. 
+a strong set of test cases. Range now has a mutation score of 79% an increase of 11%, DataUtilites now has a mutation score of 94% an increase of 6%. DataUtilites did not manage to acheive the 10% desired increase, however, a mutation score of 94% is very high and due to the limitations of time a true exhastive testing would not be feasable.
 
 ![](media/Final-PIT-Summary.png)  
 Figure 2. The Final PIT summary
+
+To note: the Range mutation score is much lower due to the presence of lots of mutations which cannot actually be fixed (like post incrementation of a return value). This means that there is a maximum improvement we could do.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 The presence of equivalent mutations has an impact on the quantitative mutation score accuracy for mutation testing.
@@ -380,9 +382,9 @@ A list of functionalities was decided after exploring the website, they were:
 7. add a product to the cart and view the cart  
 8. use the trade in program UI under the "Services" tab  
 
-From here, each person went through their functionalities and decided the best test script for their functionality based on who these functionalities would be used by real customers.
+From here, each person went through 2 functionalities (divided evenly) and decided the best test script for their functionality based on who these functionalities would be used by real customers.
 # Explain the use of assertions and checkpoints
-Checkpoints and assertions are vital in GUI testing. Checkpoints catch early test failures and speed up the testing process, assertions verify that the final outcome of the test matches what is expected. 
+Checkpoints and assertions are vital in GUI testing. Checkpoints catch early test failures and speed up the testing process, assertions verify that the final outcome of the test matches what is expected. Most of the check points verify new pages loading and proper final state. This allows the tests to run without making them too calculation intense but also allows us to detect mid-point failures early and easily in the most important locations.
 
 # How did you test each functionaity with different test data
 
@@ -490,9 +492,13 @@ There were no defects found for testing the search functionalities, as all tests
 
 ## Functionality 4. Find a product through the "Shop" tab
 This functionality was tested with the `TestFindANvidiaGPUThruShopUsingPriceAndModelFilters` script. There are three test cases for this functionality:  
+
 `idealPathTest` - the ideal path using the shop tab to find a certain product, the exact path is click shop tab, click Computers and Tablets, click PC Components, click Graphics Cards, Click NVidia Graphics Cards, filter by Model "RTX 3090", filter by Price range $2500-$4000, select the first product    
+
 `enterCharIntoNumFieldTest` - a char is entered into the price range enter box when filtering for the product  
+
 `enterInvalidRangeIntoNumFieldTest` - the price range enter box receives an invalid range of min=4000 and max=2500  
+
 Of these test cases, `enterInvalidRangeIntoNumFieldTest` failed, originally the website should have simply reset the product list page to what it was before the price filter but it actually brought an Error 404. There are four checkpoints in this test suite. <br>
 	Checkpoint 1 verifies that the Computers and Tablets page was reached. 
 	Checkpoint 2 verifies that the PC Components page was reached  
@@ -516,7 +522,7 @@ This functionality is tested in `TopDealsTest.java`. The item to be found was th
 4. `DealsSimpleDealPathTest` which uses the home page "Shop Deals" box which directs you to all deals with top deals advertised at the top.
 5. `DealsByCategoryPathTest` using simple deals but then sorting by category of smart home to find the item.
 
-It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until ready to hand in. <br />
+It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until handed in. <br />
 
 ## Functionality 7. add product to shopping cart, then view cart
 In this, we wanted to test that we can add products to the cart before paying, and also view the shopping cart. 
@@ -566,15 +572,14 @@ This functionality was tested with the `TestTradeIn` script. There are two test 
 
 `IdealPathTest` - the ideal path for the trade in calculator, that is, click on the Services tab, click on Trade-In Program, click on IPhone, switch to the newly opened tab, select IPhone 12 128GB, change carrier to Virgin Mobile, click Get Estimate
 
-`selectAPhoneThenSwitchBrand` - switch the phone brand to BlackBerry after selecting IPhone 128GB to see if the phone would be reset  
+`selectAPhoneThenSwitchBrand` - switch the phone brand to BlackBerry after selecting IPhone 12 128GB to see if the phone would be reset  
 This test suite has two checkpoints: <br>
 	Checkpoint 1 verifies that the Trade-In Program page is displayed
 	Checkpoint 2 verifies that the new tab was opened </br>
-Both test cases worked without issue. This functionality is difficult to design multiple test data for as the only manipulation involves two selection boxes at most. 
+Both test cases worked without issue. This functionality is difficult to design multiple test data for as the only manipulation involves two selection boxes at most. This test suite also needs permission to open new tabs to work.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
-Selenium unlike Sikulix accepts more languages, including Java which is what the test scripts were written in. Additionally the Selenium IDE is a much more graphicaly pleasing and easier to understand IDE compared to Sikulix. However it is very easy to add a screenshot or a portion of a screenshot using Sikulix unlike Selenium. Overall Selenium is a better choice due to it's simplicity and ease of use.
-
+Selenium unlike Sikulix accepts more languages, including Java which allows integration with JUnit tests and can allow for a comprehensive test suite. Additionally the Selenium IDE is a much more graphicaly pleasing and easier to understand IDE compared to Sikulix. However it is very easy to add a screenshot or a portion of a screenshot using Sikulix unlike Selenium. Overall Selenium is a better choice due to it's simplicity and ease of use.
 
 # How the team work/effort was divided and managed
 Team work was easily divided between the mutation testing and the selenium testing as follows.
@@ -586,13 +591,14 @@ Selenium testing was divided such that each member worked on 2/8 functionalities
 # Difficulties encountered, challenges overcome, and lessons learned
 This lab was much longer and more labour intensive than previous labs showing us how mutation testing and GUI testing development requires a lot of work and effort. This helps build on the fact that extensive testing is difficult and helps stress the need to find a balance between testing and effort.
 
-We also (once again) had issue with running the module on one of the team member's computer, resulting in the need to double up on some devices for a little bit. This slowed down progress marginally but also increased team communication.
+We also (once again) had issue with running the module on one of the team member's computer, resulting in the need to double up on some devices for a little bit. This slowed down progress marginally but also increased team communication. Eventually we got it working.
 
-Additionally, the GUI testing was quite long and had to be a combination of the recording and manual modifications to the test code. Even after developing the tests, occasionally they would not work due to changes to the actual site. Best we could, we modified the tests to reflect the new changes but it added more work to the lab.
+Additionally, the GUI testing was quite long and had to be a combination of the recording and manual modifications to the test code. Even after developing the tests, occasionally they would not work due to changes to the actual site. Best we could, we modified the tests to reflect the new changes but it added more work to the lab. It is very important to note that some of the functionality we tested will change as it is time dependent (such as current sales etc.).
 
 We also had difficulties with the mutation test report in identifying what local variable X was and resulted in some guess work.
 # Comments/feedback on the lab itself
-The pit mutation tool required a lot of time to run on your code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. We also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. We also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.
+The pit mutation tool required a lot of time to run on our code. This made mutation testing take a lot of time even though it was automated. This displayed just how much time is required for mutation testing, especially if an automated tool wasn't handy. We also noticed that downloading the test tool was not straight forward, and it took a while to actually figure out. Sometimes when you ran the mutation tool on the same code from different hosts, the percentages varied slightly. We also noticed when creating mutation tests, some of them drastically changed the percentage, while others didn't as much.
+
 Additionally with the PIT mutations, they significantly increase thermal output of laptops, in excess of 100C CPU temperatures for long periods of time. This severely degrades their lifespan.
 
 As mentioned above, GUI testing was quite time extensive and required manual as well as automatic recording. It may have been nice to have a common debugging list of things that the recording may not properly pick up that would need to be modified manually in code so that we knew what to look for.

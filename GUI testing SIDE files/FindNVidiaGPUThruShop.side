@@ -1,0 +1,948 @@
+{
+  "id": "1f4c28cd-2341-48e2-b1c5-e96b94f19a43",
+  "version": "2.0",
+  "name": "FindNVidiaGPUThruShop",
+  "url": "https://www.bestbuy.ca",
+  "tests": [{
+    "id": "121b8094-dfb4-4364-b4fa-f143497476ab",
+    "name": "IdealPathTest",
+    "commands": [{
+      "id": "7cdf58de-6d26-41f4-98f2-a1949c77248e",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dda7a10-a9b3-4c23-b647-0e0f68f779d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "352ab97c-cd10-4dc9-93c1-1bf8fd0d658d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab2749fd-381d-4739-869d-d823e035bab1",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c838e068-0475-49a6-8813-4a25cda3eedd",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.activeButton_2iIS_ > span",
+      "targets": [
+        ["css=.activeButton_2iIS_ > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae24d5dc-16a3-4c34-bbc6-4d8f3991b530",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Computers, Tablets & Accessories",
+      "targets": [
+        ["linkText=Computers, Tablets & Accessories", "linkText"],
+        ["css=.selected_3gnUn", "css:finder"],
+        ["xpath=//a[contains(text(),'Computers, Tablets & Accessories')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/div[2]/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca/category/computers-tablets/20001')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Computers, Tablets & Accessories')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dcc8709-de2e-4126-ae1f-e84a828f75b8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Computers & Tablets: iPads, eReaders & More | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3204c52-7644-4060-87e8-8a72a7e7ebf9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,403.20001220703125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e9b0775-1aa6-4ad6-9ca3-4bfb93daa611",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,828)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b31688db-e219-456b-98b5-62f354c5a532",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(13) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(13) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[3]/div/div/div[13]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[13]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Computer Components')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd4e8d40-14fa-4192-a6e5-d0b460b89277",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2e12fc9-4f0b-44c2-beb7-409350d1c4c5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Computer Parts & Supplies: Shop for PC Components | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8dc0df45-461e-4d99-8ebb-e2da530c18ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.columnContentRow_16zNr:nth-child(2) > .column_3St0Y:nth-child(3) span",
+      "targets": [
+        ["css=.columnContentRow_16zNr:nth-child(2) > .column_3St0Y:nth-child(3) span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[2]/div/div/div[3]/a/p[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/a/p[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a20c032-94d7-48ed-b79d-7d4da06ea6d5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b86745e7-d659-416b-b973-c7f341c3c7aa",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Video & Graphic Card: PCI Video Card, Gaming Graphic Cards | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "280ce447-c889-42db-b033-3183424efc96",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,148)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44c1b772-ccf1-454e-a656-7d661fcfff1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(1) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(1) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[2]/div/div/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'NVIDIA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97d737e3-27ce-44f8-852f-5c40d6845816",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e9a5c25-7223-447c-8940-581722a0eb79",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Graphics Cards with NVIDIA Chipset | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eada3202-698f-4a08-aaca-d737c29181fe",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,120)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6937b920-d97b-4f99-8935-32bb2ce32105",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(8) .darkGrey_oThXm",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(8) .darkGrey_oThXm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c4e84fc-9d47-449a-a5dc-65bced968f06",
+      "comment": "",
+      "command": "click",
+      "target": "id=facetFilter-GeForce RTX 3090",
+      "targets": [
+        ["id=facetFilter-GeForce RTX 3090", "id"],
+        ["name=facetFilter-GeForce RTX 3090", "name"],
+        ["css=#facetFilter-GeForce\\ RTX\\ 3090", "css:finder"],
+        ["xpath=//input[@id='facetFilter-GeForce RTX 3090']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/div[8]/div/div/div/li/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/div/li/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8b4bab-bf78-4849-909a-a85a220ace68",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "154d386a-0b46-49f4-bcf2-9e10266f742b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(6) .darkGrey_oThXm",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(6) .darkGrey_oThXm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "272abefa-e883-407f-a7e9-ffa090c85e05",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,195.1999969482422)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5383184e-1c4a-4392-984f-93f249840f77",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-search-bar-min-input",
+      "targets": [
+        ["id=price-search-bar-min-input", "id"],
+        ["name=price-search-bar-min-input", "name"],
+        ["css=#price-search-bar-min-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-min-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57720e27-bc25-4114-b84a-f89e5106a535",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-search-bar-min-input",
+      "targets": [
+        ["id=price-search-bar-min-input", "id"],
+        ["name=price-search-bar-min-input", "name"],
+        ["css=#price-search-bar-min-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-min-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "$2500"
+    }, {
+      "id": "532d03b4-6e78-4a47-9e39-5081d8c5ebc7",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-search-bar-max-input",
+      "targets": [
+        ["id=price-search-bar-max-input", "id"],
+        ["name=price-search-bar-max-input", "name"],
+        ["css=#price-search-bar-max-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-max-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82587e5a-912b-4db4-91bf-809b224acd8f",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-search-bar-max-input",
+      "targets": [
+        ["id=price-search-bar-max-input", "id"],
+        ["name=price-search-bar-max-input", "name"],
+        ["css=#price-search-bar-max-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-max-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "$4000"
+    }, {
+      "id": "d07c01ac-9426-432a-8a58-35ce268c4637",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button_n0Jvi > .content_3Dbgg",
+      "targets": [
+        ["css=.button_n0Jvi > .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//form/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Apply Price Range')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8f570f9-5e43-4a2e-a700-ede441f6ab7e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1e52f3f-9a56-4ac0-aa16-7d62acacbd13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div[2]/div[3]/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b1d1c48-55d7-4b8c-b8ec-ead4762bcad7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f653203-b354-4495-9338-9b169caf74d2",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "MSI NVIDIA GeForce RTX 3090 SUPRIM X 24 GB GDDR6X Video Card | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3cb4f519-b328-4b1d-810f-02b27a182b7a",
+    "name": "enterCharIntoNumFieldTest",
+    "commands": [{
+      "id": "d989fe60-7f73-4744-8935-6a28b989cf18",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "265b9040-e0f2-4b42-847e-4d808de0343e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db31b945-8b21-42a0-9596-348d1ad13e84",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0465f05-edaa-4257-9651-ee54e997f382",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80049ac7-aafb-4618-997e-db85297d3caf",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.activeButton_2iIS_ > span",
+      "targets": [
+        ["css=.activeButton_2iIS_ > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddd67562-da9c-4eea-973f-7a1c7e9c3ba6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Computers, Tablets & Accessories",
+      "targets": [
+        ["linkText=Computers, Tablets & Accessories", "linkText"],
+        ["css=.selected_3gnUn", "css:finder"],
+        ["xpath=//a[contains(text(),'Computers, Tablets & Accessories')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/div[2]/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca/category/computers-tablets/20001')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Computers, Tablets & Accessories')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "721b376b-9933-4f3c-9ca0-c74151a7ec88",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Computers & Tablets: iPads, eReaders & More | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a41bdecb-be45-4e34-8fc4-550a6bba83f9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,403.20001220703125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a6f3ba1-1063-45eb-b1b6-55b2aee9ebb0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,828)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef1c98e4-b479-4c28-ace4-70cd4a0cb628",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(13) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(13) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[3]/div/div/div[13]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[13]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Computer Components')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6692e41c-ad62-4076-80b2-49868f51b99d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77abfe4c-5800-4aa1-a80f-a51fde6d3341",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Computer Parts & Supplies: Shop for PC Components | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8447cad2-9bde-401a-99d8-6bd565016e01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.columnContentRow_16zNr:nth-child(2) > .column_3St0Y:nth-child(3) span",
+      "targets": [
+        ["css=.columnContentRow_16zNr:nth-child(2) > .column_3St0Y:nth-child(3) span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[2]/div/div/div[3]/a/p[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/a/p[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dddba05-7ae4-424a-a168-468739749014",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "082a6aa2-2f84-404c-b95b-96c0574b5f3e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Video & Graphic Card: PCI Video Card, Gaming Graphic Cards | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9befb1e-47ac-4d97-ac77-3cfd9e439b2c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,148)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c58fb34a-5732-41ad-a152-7ab5231f0ab2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(1) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(1) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[2]/div/div/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'NVIDIA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b82507dd-abbc-4623-9d4a-d6d593c4871a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "498b3c47-3909-474d-a4dc-94bc0316c289",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Graphics Cards with NVIDIA Chipset | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8adaafcc-58bc-4cf1-a76f-d7d672b60a91",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,120)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4d678df-fd40-49c2-90c6-8a16675cb185",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(8) .darkGrey_oThXm",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(8) .darkGrey_oThXm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae12f9ee-6155-441b-bf1d-c7cac9cc8bc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=facetFilter-GeForce RTX 3090",
+      "targets": [
+        ["id=facetFilter-GeForce RTX 3090", "id"],
+        ["name=facetFilter-GeForce RTX 3090", "name"],
+        ["css=#facetFilter-GeForce\\ RTX\\ 3090", "css:finder"],
+        ["xpath=//input[@id='facetFilter-GeForce RTX 3090']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/div[8]/div/div/div/li/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/div/li/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f5b337f-ca9a-4140-9b1b-c3802e1023b0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa2d348e-eaa0-46c4-8f78-b52f5186d2f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(6) .darkGrey_oThXm",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(6) .darkGrey_oThXm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "eda70b32-84cb-4bbe-9584-c38c8935adb2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,195.1999969482422)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d4f68c2-6bfc-4e5a-a6e5-221b4878d3fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-search-bar-min-input",
+      "targets": [
+        ["id=price-search-bar-min-input", "id"],
+        ["name=price-search-bar-min-input", "name"],
+        ["css=#price-search-bar-min-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-min-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc83f8b9-0ff9-42bc-bd82-2c3f2662ea42",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-search-bar-min-input",
+      "targets": [
+        ["id=price-search-bar-min-input", "id"],
+        ["name=price-search-bar-min-input", "name"],
+        ["css=#price-search-bar-min-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-min-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "$afsfe"
+    }, {
+      "id": "5e7fba25-14bc-4519-8e4b-3a0455a35220",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-search-bar-max-input",
+      "targets": [
+        ["id=price-search-bar-max-input", "id"],
+        ["name=price-search-bar-max-input", "name"],
+        ["css=#price-search-bar-max-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-max-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d267e3aa-7452-48e0-9ede-c25d8b8659b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-search-bar-max-input",
+      "targets": [
+        ["id=price-search-bar-max-input", "id"],
+        ["name=price-search-bar-max-input", "name"],
+        ["css=#price-search-bar-max-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-max-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "$-hgjd"
+    }, {
+      "id": "998207a8-33ae-4c88-8ded-34829abf1c4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button_n0Jvi > .content_3Dbgg",
+      "targets": [
+        ["css=.button_n0Jvi > .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//form/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Apply Price Range')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "802ce5cb-4af2-40e3-9865-e453220f5add",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Graphics Cards with NVIDIA Chipset | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4ce0fd3f-d879-4bd0-9d61-df07a42db7b3",
+    "name": "enterInvalidRangeIntoNumField",
+    "commands": [{
+      "id": "9f148fa0-f042-4650-96bb-6fb9407de7bc",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34b325fa-eab0-4bbb-9589-4eb789fce0ff",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "780e51f3-bf24-4137-bc05-69bdd3f58064",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7702c010-60e3-4676-afda-f024baf8e2ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c52dfa95-0d6a-4bdc-b5cf-50dbac5546fe",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.activeButton_2iIS_ > span",
+      "targets": [
+        ["css=.activeButton_2iIS_ > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "329822b9-d841-4134-aeca-3148b20b5cb2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Computers, Tablets & Accessories",
+      "targets": [
+        ["linkText=Computers, Tablets & Accessories", "linkText"],
+        ["css=.selected_3gnUn", "css:finder"],
+        ["xpath=//a[contains(text(),'Computers, Tablets & Accessories')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/div[2]/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca/category/computers-tablets/20001')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Computers, Tablets & Accessories')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af45452d-40dd-46a9-8407-577e425ce590",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Computers & Tablets: iPads, eReaders & More | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ea6752e-e18e-4165-bda8-f9b0824f4f3e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,403.20001220703125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c6a07af-0643-4911-9bf0-be095dc21b44",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,828)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61eeb763-f00f-453c-b905-1eb705d8bfef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(13) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(13) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[3]/div/div/div[13]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[13]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Computer Components')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ca71874-14f0-44f8-82e0-d29ec39f1740",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0b9477c-9438-4881-8018-ed677570222e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Computer Parts & Supplies: Shop for PC Components | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edc311c2-2206-4bb2-aada-9f34de337d24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.columnContentRow_16zNr:nth-child(2) > .column_3St0Y:nth-child(3) span",
+      "targets": [
+        ["css=.columnContentRow_16zNr:nth-child(2) > .column_3St0Y:nth-child(3) span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[2]/div/div/div[3]/a/p[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/a/p[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4233765f-4455-44f3-9275-2028189fbc48",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19b01ec7-1781-446e-8945-12299e1b63ad",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Video & Graphic Card: PCI Video Card, Gaming Graphic Cards | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "514d9c1c-970c-46fd-a80a-8c6eec1b0873",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,148)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a8a8b3c-584c-4309-bf75-64b831d87fdc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(1) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(1) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/section[2]/div/div/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'NVIDIA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ede6a61-c29f-4a24-9850-4a0473584d23",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31b7f4d9-fd2a-4c67-bf3f-b018f9c246f2",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Graphics Cards with NVIDIA Chipset | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f670bfe-3675-4723-b5ac-860476bce1ea",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,120)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b2e20ee-bdbb-4fc2-a3e2-b35adff5066f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(8) .darkGrey_oThXm",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(8) .darkGrey_oThXm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5093c4fa-36ca-4ad8-87ec-3351f7918853",
+      "comment": "",
+      "command": "click",
+      "target": "id=facetFilter-GeForce RTX 3090",
+      "targets": [
+        ["id=facetFilter-GeForce RTX 3090", "id"],
+        ["name=facetFilter-GeForce RTX 3090", "name"],
+        ["css=#facetFilter-GeForce\\ RTX\\ 3090", "css:finder"],
+        ["xpath=//input[@id='facetFilter-GeForce RTX 3090']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/div[8]/div/div/div/li/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/div/li/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c1016e2-b686-4a83-a6f3-ba1c1ab8b4b3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd6df17a-b90f-439e-8f34-1d8d2fea6711",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(6) .darkGrey_oThXm",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(6) .darkGrey_oThXm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fb5068e-00a9-4ce9-8b96-31d8cfca858e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,195.1999969482422)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e67cc42-167b-4592-98c9-ba39b78864e8",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-search-bar-min-input",
+      "targets": [
+        ["id=price-search-bar-min-input", "id"],
+        ["name=price-search-bar-min-input", "name"],
+        ["css=#price-search-bar-min-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-min-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d713855-3831-4bad-84d9-4b833cc70645",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-search-bar-min-input",
+      "targets": [
+        ["id=price-search-bar-min-input", "id"],
+        ["name=price-search-bar-min-input", "name"],
+        ["css=#price-search-bar-min-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-min-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "$4000"
+    }, {
+      "id": "0bd5ca49-ade7-427a-bc70-2676cb8b8ccc",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-search-bar-max-input",
+      "targets": [
+        ["id=price-search-bar-max-input", "id"],
+        ["name=price-search-bar-max-input", "name"],
+        ["css=#price-search-bar-max-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-max-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bf64734-4c1d-4574-b550-c72c292f389e",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-search-bar-max-input",
+      "targets": [
+        ["id=price-search-bar-max-input", "id"],
+        ["name=price-search-bar-max-input", "name"],
+        ["css=#price-search-bar-max-input", "css:finder"],
+        ["xpath=//input[@id='price-search-bar-max-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "$2500"
+    }, {
+      "id": "4dc935ba-4597-4c8e-868b-149425fc2efa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button_n0Jvi > .content_3Dbgg",
+      "targets": [
+        ["css=.button_n0Jvi > .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[2]/div/div/div[6]/div/div/div/div/div/form/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//form/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Apply Price Range')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fa79655-8440-4b8d-a7d8-484ab15c272f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Graphics Cards with NVIDIA Chipset | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "76ddcb0a-e83f-4fac-a20c-a6b27357da42",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.bestbuy.ca/"],
+  "plugins": []
+}

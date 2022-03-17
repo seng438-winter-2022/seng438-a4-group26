@@ -1,0 +1,366 @@
+{
+  "id": "d5a22ff5-fe7e-45f5-9a1f-3f4e3fb19ec3",
+  "version": "2.0",
+  "name": "TradeIn",
+  "url": "https://www.bestbuy.ca",
+  "tests": [{
+    "id": "3d0ec4fd-6114-44a6-82d7-96e69f60c492",
+    "name": "selectAPhoneThenSwitchBrand",
+    "commands": [{
+      "id": "8caf18e2-e188-49ca-b120-c5c8be0f0c49",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6000b192-4b77-44c9-a25e-2754ed636f73",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d0399fe-fd61-4433-946a-58f40efd3408",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(4) > .dealsContainer_1k5wi .white_3qh7k",
+      "targets": [
+        ["css=li:nth-child(4) > .dealsContainer_1k5wi .white_3qh7k", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "889fd959-163b-4f84-91b5-7f28bdd8938c",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) > .dealsContainer_1k5wi .white_3qh7k",
+      "targets": [
+        ["css=li:nth-child(4) > .dealsContainer_1k5wi .white_3qh7k", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "63c7389a-5c9b-426c-abc3-b323108cb120",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.activeButton_2iIS_ > .white_3qh7k",
+      "targets": [
+        ["css=.activeButton_2iIS_ > .white_3qh7k", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc6f27d1-8dca-4780-ab0f-1ec05523e6ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menuItem_2kIs9:nth-child(7) .menuItemText_1yd__",
+      "targets": [
+        ["css=.menuItem_2kIs9:nth-child(7) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[7]/a/span", "xpath:idRelative"],
+        ["xpath=//li[7]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Trade-In Program')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30acf344-32a0-4bf9-b24d-c81a51ed0b16",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Trade-In Program | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d743d3d5-126f-4731-ac9b-3af32727e447",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,320)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a54ed52b-fe1c-4c93-84a6-ae7af9cdc3c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(2) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(2) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/main/div[2]/div/section[3]/div/div/div[2]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'iPhone')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "Trade-In Opts",
+      "windowTimeout": 2000
+    }, {
+      "id": "f6568821-4ee9-418f-8aab-3723dcb590de",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${Trade-In Opts}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3101225e-96ae-4c1e-83cf-795093309f7e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Online Estimator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba46503e-ba17-4e97-9679-2f300aef8a9e",
+      "comment": "",
+      "command": "click",
+      "target": "name=Model",
+      "targets": [
+        ["name=Model", "name"],
+        ["css=.tbl_select_width:nth-child(6)", "css:finder"],
+        ["xpath=//select[@name='Model']", "xpath:attributes"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce04dfcc-d3b9-4512-864a-7476685e7ee6",
+      "comment": "",
+      "command": "select",
+      "target": "name=Model",
+      "targets": [],
+      "value": "label=IPHONE 12 128GB"
+    }, {
+      "id": "50dac498-b77d-4d51-8cf5-a7f42e1935e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tbl_select_width:nth-child(6) > option:nth-child(11)",
+      "targets": [
+        ["css=.tbl_select_width:nth-child(6) > option:nth-child(11)", "css:finder"],
+        ["xpath=//option[@value='IPHONE%2012%20128GB']", "xpath:attributes"],
+        ["xpath=//select[3]/option[11]", "xpath:position"],
+        ["xpath=//option[contains(.,'IPHONE 12 128GB')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34f748a9-0a58-467e-99ed-c1607ef6287b",
+      "comment": "",
+      "command": "click",
+      "target": "name=Brand",
+      "targets": [
+        ["name=Brand", "name"],
+        ["css=.tbl_select_width:nth-child(4)", "css:finder"],
+        ["xpath=//select[@name='Brand']", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e41f930e-defc-45ac-ae36-c218e500398c",
+      "comment": "",
+      "command": "select",
+      "target": "name=Brand",
+      "targets": [],
+      "value": "label=BLACKBERRY"
+    }, {
+      "id": "ba568d89-15b9-4718-9499-37af9fcc161d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tbl_select_width:nth-child(4) > option:nth-child(5)",
+      "targets": [
+        ["css=.tbl_select_width:nth-child(4) > option:nth-child(5)", "css:finder"],
+        ["xpath=//option[@value='BLACKBERRY']", "xpath:attributes"],
+        ["xpath=//select[2]/option[5]", "xpath:position"],
+        ["xpath=//option[contains(.,'BLACKBERRY')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e28e2a5-42dd-47cc-9e4c-9324f8ae414d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div",
+      "targets": [],
+      "value": "Cell Phone Estimator\\n- Select One -\\nTablets\\nCell Phones\\nApple iPod / Microsoft Zune\\nDigital Camera\\nApple Laptops\\nPC Laptops\\nApple Desktop\\nVideo Games\\nVideo Game Consoles\\nRecyclables\\nWearables\\n\\n--Select Phone Brand--\\nAPPLE\\nASUS\\nBELL GENERIC\\nBLACKBERRY\\nDIGITAL2\\nFIDO GENERIC\\nGOOGLE\\nHTC\\nHUAWEI\\nKOODO GENERIC\\nLG ELECTRONICS\\nMOTOROLA\\nNOKIA\\nROGERS GENERIC\\nSAMSUNG\\nSASKTEL GENERIC\\nSONY ERICSSON\\nTBAYTEL GENERIC\\nTELUS GENERIC\\nVIRGIN GENERIC\\n\\n--Select Phone Model\\n8100\\n8110\\n8120\\n8130\\n8230\\n8310\\n8320\\n8330\\n8520\\n8530\\n8700\\n8800\\n8830\\n8900\\n9000\\n9100\\n9300\\n9320\\n9330\\n9360\\n9530\\n9550\\n9630\\n9670\\n9700\\n9780\\n9790\\n9800\\n9810\\n9860\\n9900\\nCLASSIC\\nKEY2\\nKEYONE\\nLEAP\\nPASSPORT\\nPRIV 32GB\\nQ10\\nQ5\\nZ10\\nZ30"
+    }]
+  }, {
+    "id": "079087f1-8eab-4a48-8dc7-1558b3d0cf43",
+    "name": "IdealPath",
+    "commands": [{
+      "id": "bd76ac3e-16e7-4be9-9a90-1301380f647f",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afc9b7c4-b7ea-467a-9ce3-51c65d147f4a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d35c62ac-1f5b-4aba-9fa4-90881f164f91",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) button > span",
+      "targets": [
+        ["css=li:nth-child(4) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[4]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce0e7924-3f61-451c-9d26-3b181625f37e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menuItem_2kIs9:nth-child(7) .menuItemText_1yd__",
+      "targets": [
+        ["css=.menuItem_2kIs9:nth-child(7) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[7]/a/span", "xpath:idRelative"],
+        ["xpath=//li[7]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Trade-In Program')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "369f5347-997e-4b8d-a9ad-35843ee9a3b8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Trade-In Program | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a03ad011-57fc-4a11-a88f-7da2411e3d45",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,314)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf0816bd-616b-4a86-9368-7fb89d598233",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,504)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7705ddfe-c712-4afa-aa87-e3dac4ac1d4b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(2) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(2) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/main/div[2]/div/section[3]/div/div/div[2]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'iPhone')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "Trade-In opts",
+      "windowTimeout": 2000
+    }, {
+      "id": "0ed7386f-5928-4e42-a5a1-19191dcd95c1",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${Trade-In opts}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2060244-9f3e-4da5-9113-40bbcdcb069b",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Online Estimator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "839d9499-5655-4a02-a037-db034576e681",
+      "comment": "",
+      "command": "click",
+      "target": "name=Model",
+      "targets": [
+        ["name=Model", "name"],
+        ["css=.tbl_select_width:nth-child(6)", "css:finder"],
+        ["xpath=//select[@name='Model']", "xpath:attributes"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14366a0d-fbb1-4b2c-8c12-d003c4c94a29",
+      "comment": "",
+      "command": "select",
+      "target": "name=Model",
+      "targets": [],
+      "value": "label=IPHONE 12 128GB"
+    }, {
+      "id": "9d3a26f0-0483-4a00-b857-58eb71f8cdbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tbl_select_width:nth-child(6) > option:nth-child(11)",
+      "targets": [
+        ["css=.tbl_select_width:nth-child(6) > option:nth-child(11)", "css:finder"],
+        ["xpath=//option[@value='IPHONE%2012%20128GB']", "xpath:attributes"],
+        ["xpath=//select[3]/option[11]", "xpath:position"],
+        ["xpath=//option[contains(.,'IPHONE 12 128GB')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb6d1fbe-1f06-424c-b2d1-266d00ec052d",
+      "comment": "",
+      "command": "click",
+      "target": "name=CurrentCarrier",
+      "targets": [
+        ["name=CurrentCarrier", "name"],
+        ["css=tr:nth-child(8) .tbl_select_width", "css:finder"],
+        ["xpath=//select[@name='CurrentCarrier']", "xpath:attributes"],
+        ["xpath=//table[@id='main_table']/tbody/tr[8]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f6141c2-afdc-45c7-b871-033c78667203",
+      "comment": "",
+      "command": "select",
+      "target": "name=CurrentCarrier",
+      "targets": [],
+      "value": "label=Virgin Mobile"
+    }, {
+      "id": "eebed205-8d64-4ba2-9ddf-5d0f4c95f80f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(8) option:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(8) option:nth-child(4)", "css:finder"],
+        ["xpath=(//option[@value='4'])[2]", "xpath:attributes"],
+        ["xpath=//table[@id='main_table']/tbody/tr[8]/td[2]/select/option[4]", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/select/option[4]", "xpath:position"],
+        ["xpath=//option[contains(.,'Virgin Mobile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a914190-d35d-4ec3-b5da-89df8389b9ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.grey_button",
+      "targets": [
+        ["css=.grey_button", "css:finder"],
+        ["xpath=//input[@value='Get Estimate']", "xpath:attributes"],
+        ["xpath=//table[@id='main_table']/tbody/tr[10]/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c83eb713-5b2a-490e-ac18-b9723218c83e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=main_table",
+      "targets": [
+        ["id=main_table", "id"],
+        ["css=#main_table", "css:finder"],
+        ["xpath=//table[@id='main_table']", "xpath:attributes"],
+        ["xpath=//table[2]", "xpath:position"]
+      ],
+      "value": "apple IPHONE 12 128GB\\nMODEL: apple IPHONE 12 128GB\\nCONDITION: GOOD\\nWORKING BATTERY INCLUDED: YES - MAIN BATTERY INCLUDED\\nUSER LOCK/MASTER RESET CODE CLEARED (OR SET TO 1234): YES\\nESN / SERIAL NUMBER IS VISIBLE: YES\\nWATER OR MOISTURE DAMAGE: NO\\nCURRENT CARRIER: Virgin Mobile\\nFIND MY IPHONE ACTIVATION LOCK DISABLED: YES\\nEstimated Value:\\n$450.00"
+    }]
+  }],
+  "suites": [{
+    "id": "3a75ddf8-a8db-49f9-a6e7-5a373f36e9dc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.bestbuy.ca/"],
+  "plugins": []
+}

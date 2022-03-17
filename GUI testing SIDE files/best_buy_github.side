@@ -1,0 +1,1712 @@
+{
+  "id": "151be52f-7206-4f88-923a-352d8aad8f63",
+  "version": "2.0",
+  "name": "best_buy_github",
+  "url": "https://www.bestbuy.ca",
+  "tests": [{
+    "id": "376a3f4e-df9f-438d-b084-f3b001ed374b",
+    "name": "findiPhoneWithFilters",
+    "commands": [{
+      "id": "8f228dfa-3cdf-430a-adca-1e8b446f4079",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "907d0280-2abc-4ea9-8dcb-391487612512",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x860",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd433d62-3121-4d94-a81d-91e32b14ca63",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5672569f-5493-4bf6-af18-176480933259",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ac46c29-4e42-4617-9e25-b995cae2db6a",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "phone"
+    }, {
+      "id": "947babcb-6596-42ea-be5e-593669475944",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9ce1a42f-5017-4fbb-a47f-5d0422ab8ead",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Results for: phone | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "499e82db-eafe-4a3a-b9f6-87fb74633f17",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.filterBtnLabel__zgEL",
+      "targets": [
+        ["css=.filterBtnLabel__zgEL", "css:finder"],
+        ["xpath=//section[@id='filterBar']/div[2]/button/span/div/span", "xpath:idRelative"],
+        ["xpath=//span/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0930e9d-7ac5-47e1-9456-7fcca369be9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filterBtnLabel__zgEL",
+      "targets": [
+        ["css=.filterBtnLabel__zgEL", "css:finder"],
+        ["xpath=//section[@id='filterBar']/div[2]/button/span/div/span", "xpath:idRelative"],
+        ["xpath=//span/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "613e21de-e74d-40bd-98f7-09291133caf2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ecomm-webapp-818:nth-child(1) > div:nth-child(1) > .productName_3Ikre",
+      "targets": [
+        ["css=.ecomm-webapp-818:nth-child(1) > div:nth-child(1) > .productName_3Ikre", "css:finder"],
+        ["xpath=//li/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Best Buy Mobile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79185ce1-6307-402a-999a-cc9d0e808e78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container_3BQfa:nth-child(3) > .button_2xI6P",
+      "targets": [
+        ["css=.container_3BQfa:nth-child(3) > .button_2xI6P", "css:finder"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Model')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "370e4bb2-81e1-43d2-9c20-f3f0754d63eb",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.ecomm-webapp-1023",
+      "targets": [
+        ["css=.ecomm-webapp-1023", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "244,123"
+    }, {
+      "id": "cff26a97-11f4-4c6a-a16b-2b5939a8c12e",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.ecomm-webapp-1023",
+      "targets": [
+        ["css=.ecomm-webapp-1023", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "244,123"
+    }, {
+      "id": "5c1a74b7-47b1-4fbb-ac20-53134b27b265",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.ecomm-webapp-1023",
+      "targets": [
+        ["css=.ecomm-webapp-1023", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "244,123"
+    }, {
+      "id": "70729973-199d-4cb4-a461-f06058328155",
+      "comment": "",
+      "command": "click",
+      "target": "id=facetFilter-iPhone 13",
+      "targets": [
+        ["id=facetFilter-iPhone 13", "id"],
+        ["name=facetFilter-iPhone 13", "name"],
+        ["css=#facetFilter-iPhone\\ 13", "css:finder"],
+        ["xpath=//input[@id='facetFilter-iPhone 13']", "xpath:attributes"],
+        ["xpath=//li[7]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cdfad69-75d6-4a96-b9e0-4d42a2558cca",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bce07b3-3693-4767-8b02-67c0d18ae3a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ecomm-webapp-1257",
+      "targets": [
+        ["css=.ecomm-webapp-1257", "css:finder"],
+        ["xpath=//body/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70dc2ee1-a5e8-4ccd-9a93-782ad2eb9640",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pillList_uzdpl",
+      "targets": [
+        ["css=.pillList_uzdpl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5d785c3-0f43-443f-9ace-2af2754da550",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Results for: phone | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c41c593-44fa-40a3-a82e-ebffb7e15c87",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.pill_2ra42",
+      "targets": [
+        ["css=.pill_2ra42", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/ul/li", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'iPhone 13')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7a582510-86ee-4c2f-ac36-3745d006b303",
+    "name": "searchIPadPro11",
+    "commands": [{
+      "id": "77796ffb-af18-4625-ae51-e6655a052071",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bffc4e5-a88b-4f35-bd67-c3da89d98bee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x860",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d66ee24a-5d53-481e-8111-8dae4f500c3b",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Best Buy: Shop Online For Deals & Save | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "780db700-6254-4579-bd5f-17196fc4def8",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6709d32d-459e-4a4a-9b8c-680138373743",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43b085e7-88e7-4caa-8077-4ece363d9a57",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ipad pro 11"
+    }, {
+      "id": "e2064692-9695-40f2-8572-0627f1f0c1c1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "57f97b76-1c68-47db-ab25-76cdf0090072",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Results for: ipad pro 11 | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3624b972-cdb9-4719-9355-6a504bb1bdf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.breadcrumb_iafPH > li:nth-child(2)",
+      "targets": [
+        ["css=.breadcrumb_iafPH > li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/ol/li[2]", "xpath:idRelative"],
+        ["xpath=//ol/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Search for \"ipad pro 11\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53ba06c7-7ffe-427a-b84e-75a2cbd64d6f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.breadcrumb_iafPH > li:nth-child(2)",
+      "targets": [
+        ["css=.breadcrumb_iafPH > li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/ol/li[2]", "xpath:idRelative"],
+        ["xpath=//ol/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Search for \"ipad pro 11\"')]", "xpath:innerText"]
+      ],
+      "value": "Search for \"ipad pro 11\""
+    }, {
+      "id": "8a40dea4-24af-4194-9b80-8bdf14d84351",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1c9f168-3c81-48f6-b2a0-457315c1edbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdc580d9-30eb-4b39-ae84-5020d9e4e232",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Apple iPad Pro 11\" 128GB with Wi-Fi (3rd Generation) - Space Grey | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b304ead-0add-410a-afd0-80ef1904c186",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(4) .x-crumb",
+      "targets": [
+        ["css=li:nth-child(4) .x-crumb", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/ol/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//ol/li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Apple Tablets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02e9246f-ae65-4324-bff9-a94ad5cb2395",
+      "comment": "",
+      "command": "click",
+      "target": "css=.x-page-content",
+      "targets": [
+        ["css=.x-page-content", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16151646-7bf9-41bc-8c83-968354494569",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.productName_2KoPa",
+      "targets": [
+        ["css=.productName_2KoPa", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Apple iPad Pro 11\" 128GB with Wi-Fi (3rd Generation) - Space Grey')]", "xpath:innerText"]
+      ],
+      "value": "Apple iPad Pro 11\" 128GB with Wi-Fi (3rd Generation) - Space Grey"
+    }]
+  }, {
+    "id": "d9c9bb2e-388a-404e-98e6-246fad472003",
+    "name": "testSearchwithAutoFill",
+    "commands": [{
+      "id": "6d42c058-84c4-47fe-a989-ba40b64b66de",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e16e5bf0-ea8c-4ccb-9c3b-d0122fabc53c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c8db998-f07d-4973-bbfd-ff08cd2fa7c1",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0baca8aa-e38f-4031-8635-677075d3e947",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a37da3f9-d273-4579-adb5-19e76c2fbe48",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6682f088-7f4a-4620-af48-f4b8ea218416",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ipad cas"
+    }, {
+      "id": "db7522c3-c9ce-42ae-9bf4-9fdf672ec4cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.undefined > strong",
+      "targets": [
+        ["css=.undefined > strong", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/ul/li[4]/a/strong", "xpath:idRelative"],
+        ["xpath=//li[4]/a/strong", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6030e014-a0a1-41d6-a28e-bfe2ce6863e3",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Results for: ipad cases | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d221c7b-1290-4ad6-a59a-8812c361af7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bf6b6ee-9d86-437c-9d26-8406273d5c3a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "OtterBox Defender Rugged Case for iPad 10.2\" - Black | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "174dd884-b9b3-47be-8f9b-2c17091a7168",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.addToCartLabel_YZaVX > span",
+      "targets": [
+        ["css=.addToCartLabel_YZaVX > span", "css:finder"],
+        ["xpath=//form[@id='test']/button/span/div/span", "xpath:idRelative"],
+        ["xpath=//button/span/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "61c11f06-c600-4a92-b253-2b8b871ed38b",
+    "name": "testSequentialSearch",
+    "commands": [{
+      "id": "1aa108c8-7250-4093-9eff-3007ac0cc50f",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2c4027a-d201-4c6b-9b2f-b8df50154568",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5204000-d2c1-4d13-ab8a-87beacb9c233",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9c87a1f-a8b5-46b7-8ccc-f987a65a6360",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6de6b717-cbd3-4c85-8c0a-071290f2a28d",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "playstation 4"
+    }, {
+      "id": "fa03cb9c-4b8f-4275-b756-47c7ad4733a6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "0ed97481-637e-422b-972c-25e7c2e3e63c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.title_3A6Uh",
+      "targets": [
+        ["css=.title_3A6Uh", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'PlayStation 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a46a5df-dc0d-4db7-9108-1a02e6713d5c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.title_3A6Uh",
+      "targets": [
+        ["css=.title_3A6Uh", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'PlayStation 4')]", "xpath:innerText"]
+      ],
+      "value": "PlayStation 4"
+    }, {
+      "id": "b325abdb-0c69-42fb-b999-ca21da10b7c5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "PS4: Consoles, Games & Accessories | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a65bdc6-b55f-4fb1-9f9c-d1886a5d0456",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,72)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "227ca3a6-6c36-454c-9146-5a079df80320",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,364)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2351ae02-7dc4-4fe9-ae17-5945496e0033",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1018)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba977036-40c4-4c59-8ce0-23b8885a5080",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1377)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "909b0e02-735e-443a-aa7f-81bb099b6c3e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1523)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea4dfc72-7e0c-4d56-bf0d-e90755839f6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(3) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(3) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[4]/div/div/ul/div/div[3]/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b1bc1fe-a4c9-4d10-b875-8fb833dd6a07",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1a63538-2dbe-4057-b467-0d6f649e4b03",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "PlayStation 4 1TB Console | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ca04e91-7bfd-4cdc-9591-63e1c3d39c4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.x-page-content",
+      "targets": [
+        ["css=.x-page-content", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b2c74f5-f4ed-46e3-b168-1a8151c8bc25",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.productName_2KoPa",
+      "targets": [
+        ["css=.productName_2KoPa", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'PlayStation 4 1TB Console')]", "xpath:innerText"]
+      ],
+      "value": "PlayStation 4 1TB Console"
+    }, {
+      "id": "fb7b10ea-e40a-470b-8528-f5c06face87c",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1804528-4205-4179-8188-0378fb499119",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d00c9e2c-e8e2-460a-a941-fc65e5af3d73",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0e1615d-6bc6-49bc-8be0-a437fad36e64",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "playstation 4 controller"
+    }, {
+      "id": "9d25bd5d-143d-4b64-b29c-2eaae1c20562",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bb84485c-f8b1-4aa8-9b45-0a7fb5292d28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.breadcrumb_iafPH",
+      "targets": [
+        ["css=.breadcrumb_iafPH", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/ol", "xpath:idRelative"],
+        ["xpath=//ol", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5483704e-7e2f-4584-b551-61eca95fa014",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.breadcrumb_iafPH > li:nth-child(2)",
+      "targets": [
+        ["css=.breadcrumb_iafPH > li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/ol/li[2]", "xpath:idRelative"],
+        ["xpath=//ol/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Search for \"playstation 4 controller\"')]", "xpath:innerText"]
+      ],
+      "value": "Search for \"playstation 4 controller\""
+    }, {
+      "id": "65e0b2d0-e19e-4609-b76a-9b43a7a81d43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div[3]/div/div/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d12ae4a-e97a-42a2-9e52-ec3007fd5a67",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.x-reserveInStoreButton > .content_3Dbgg",
+      "targets": [
+        ["css=.x-reserveInStoreButton > .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div[2]/div/div[2]/div[2]/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Pick Up at Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97aed3b1-5056-416c-a023-394f2265b5ae",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.x-reserveInStoreButton > .content_3Dbgg",
+      "targets": [
+        ["css=.x-reserveInStoreButton > .content_3Dbgg", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div[2]/div/div[2]/div[2]/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Pick Up at Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4761488-a3aa-4520-8be3-97475bad5298",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "PlayStation 4 DualShock 4 Wireless Controller - Jet Black | Best Buy Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "264973f5-cc78-421c-8aa0-e5522ea5665f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.customBreadcrumbListPadding_UmjWj",
+      "targets": [
+        ["css=.customBreadcrumbListPadding_UmjWj", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/ol", "xpath:idRelative"],
+        ["xpath=//ol", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a493c5be-db21-4bf0-99ed-22b8e917380a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.customBreadcrumbListPadding_UmjWj > li:nth-child(7)",
+      "targets": [
+        ["css=.customBreadcrumbListPadding_UmjWj > li:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/ol/li[7]", "xpath:idRelative"],
+        ["xpath=//li[7]", "xpath:position"],
+        ["xpath=//li[contains(.,'Product Details')]", "xpath:innerText"]
+      ],
+      "value": "Product Details"
+    }]
+  }, {
+    "id": "5c581437-55e9-4d6e-b600-a95ad96a940e",
+    "name": "testRegisterValid",
+    "commands": [{
+      "id": "5b4dcd95-3634-44a6-aa3c-f7df67d32fa2",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7e414e3-d129-4632-8689-d376c0fd672e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9279e697-d802-45f7-9509-c16a7fef069a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3855ce90-68eb-4a90-a859-b60f75445d2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2d45ca0-fcd4-45f5-8eb2-5d2cd5f06818",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df15cc94-f1f8-43bf-b491-a25d6ac7dc76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26072c46-7380-455b-8a28-e369cff7489b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.page-title",
+      "targets": [
+        ["css=.page-title", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Create an Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "752dc7e9-0dcc-4bd9-a18e-d7945c121ce6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.page-title > span",
+      "targets": [
+        ["css=.page-title > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an Account')]", "xpath:innerText"]
+      ],
+      "value": "Create an Account"
+    }, {
+      "id": "14741c1a-e729-4104-9a20-cd786e6ed2b1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "58eb1958-0194-414d-b547-81985c3e1954",
+    "name": "testRegisterInvalid",
+    "commands": [{
+      "id": "e19b9bd1-7454-4385-b30d-4b76b87c6029",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60f85280-05a1-4b08-8ffc-d360c6b37e5e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f0d7b48-f248-4a5b-a0d5-6b6f881f08a4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dff5d22-e562-4329-a5b1-bda76084a760",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c4acc20-03e0-47f8-9e5f-9200e48755c9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ffcd7b4-c274-4e24-860a-d189d0407e76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb1642bc-fcaf-4f4d-9167-262763f19721",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f6d479f-8152-4077-8724-c379aa98bc0d",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "153a3e8a-832c-479a-805f-170847360bde",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "j"
+    }, {
+      "id": "736d2bbc-690a-47bd-bc35-ca89b12a535f",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c1c284b-28dd-4f06-898b-fd72a3044283",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18278f0c-8fe0-41a1-a374-f51939252c51",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "l"
+    }, {
+      "id": "a8bdf447-b43b-4f71-9cb8-c31350931a20",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bd4132a-b897-452c-a391-6f7dc830ad85",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc9c94cf-a76f-4d1c-b470-fafb3a6f0ee0",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "jl"
+    }, {
+      "id": "5ba91de8-2598-49c9-b3f4-d64472b96ccc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.validation-error > .error-msg",
+      "targets": [
+        ["css=.validation-error > .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "303327df-6177-4a70-9f7e-bba698dac6c8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.validation-error > .error-msg",
+      "targets": [
+        ["css=.validation-error > .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "This is not a valid email address."
+    }, {
+      "id": "61711f4e-adf8-4e7a-b9fe-62495be5fe7e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1cda2868-899f-4adc-ba52-209621a128b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "1e3"
+    }, {
+      "id": "ec622289-8426-4487-a5ad-7cd38a441158",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5336b3a-5e93-4ca0-aca3-8f0a0c068e54",
+      "comment": "",
+      "command": "click",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29b8aacc-af27-49d7-8060-ef7eef3e86db",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f86b453-f043-4d9f-bc30-c0126d49c2b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_18GWE:nth-child(1) > .validation-error > .error-msg",
+      "targets": [
+        ["css=.\\_18GWE:nth-child(1) > .validation-error > .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3ff8fb1-d750-4b09-876f-29c67a9ac078",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.\\_18GWE:nth-child(1) > .validation-error > .error-msg",
+      "targets": [
+        ["css=.\\_18GWE:nth-child(1) > .validation-error > .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Please review the password requirements."
+    }, {
+      "id": "bc4d55ea-3310-48e2-b3c7-87ab62299cad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_18GWE:nth-child(2) > .validation-error > .error-msg",
+      "targets": [
+        ["css=.\\_18GWE:nth-child(2) > .validation-error > .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0a78e77-1670-4c95-a60f-b7a27caca52f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.\\_18GWE:nth-child(2) > .validation-error > .error-msg",
+      "targets": [
+        ["css=.\\_18GWE:nth-child(2) > .validation-error > .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "This is not a valid email address."
+    }, {
+      "id": "66183585-309e-43ec-893f-fe07d7381c8c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a3cae0c1-5f2a-4d40-9df7-56b1a7274223",
+    "name": "testRegisterAlreadyExists",
+    "commands": [{
+      "id": "08dc87a0-f004-4620-8bd6-d16549cb08e6",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42578bef-0bb5-49ae-8908-2b2263aecade",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf4b98f7-327e-42cd-ad69-71f8c99bd762",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4636e48b-0148-4548-a91b-446fdb6d36ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8fe4014-583e-41af-9a0a-a5a5310f155f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e6047dd-1ce8-4141-b729-52a8926ce47f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49714cb2-7c90-48aa-ae72-ce09861ad936",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85abf90d-f24e-4510-a545-b5845fadfb5d",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "j"
+    }, {
+      "id": "b3c2cc71-b3f5-436c-ba6c-2ea172756c08",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce163add-bbd8-4887-adba-18a7a354b544",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "l"
+    }, {
+      "id": "1c4955ce-a034-419d-898d-3374cf9982d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "559e437f-c26c-4a84-aecb-e53d73d992fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "jarrl1933@gmail.com"
+    }, {
+      "id": "891081e1-153a-42e6-9eb7-981b7ccea7be",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84e06291-e9fb-41b8-97f1-44b19d9ffc4a",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "123E!yuii"
+    }, {
+      "id": "14dfb28f-28d9-443e-a05f-ae7f5e74377c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d5a686a-85c1-451e-bb78-3217780eb4db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf73eefd-f886-4bd0-b5c9-554381f11d2f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,551)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b7c562a-b4d3-44eb-9ea4-2f322448ce1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_1MCAn",
+      "targets": [
+        ["css=.\\_1MCAn", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "988ab407-1035-4839-bcd9-d6e2063d8c33",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mWZ7T > p",
+      "targets": [
+        ["css=.mWZ7T > p", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'An account with this email address already exists. Please use it to sign in or enter a new email to continue.')]", "xpath:innerText"]
+      ],
+      "value": "An account with this email address already exists. Please use it to sign in or enter a new email to continue."
+    }]
+  }, {
+    "id": "05b14635-ee4d-43ee-8d30-fc8bcbba2934",
+    "name": "testRegisterEmpty",
+    "commands": [{
+      "id": "6dac2ed7-9e2c-4d47-bfbe-6fbd3fedf56e",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c60234a8-f99b-41a8-b4bd-370055e89120",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "820x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdaaa130-212a-423e-8e8c-2357fc8e7402",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.signInOutNavContainer_2mwkw path:nth-child(1)",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "709ecd58-47c6-4a15-8823-1eed3a3bc85e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36e78e8b-69de-4a2d-bc52-9458c6dec785",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cce12f5-4883-45bb-866c-8a84a8ca0947",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3Po4I > span",
+      "targets": [
+        ["css=.\\_3Po4I > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/div/div[2]/div/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5d4c787-fbc6-4680-8923-98ea99c66e00",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29a3f3be-8b10-44d3-8221-6a6ecaa96770",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3PA_N",
+      "targets": [
+        ["css=.\\_3PA_N", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='createAccount']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f680a3a2-6620-4a85-afec-132a338a9ed1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3YWMi .error-msg",
+      "targets": [
+        ["css=.\\_3YWMi .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbc3c114-6278-45bf-b2a4-28245bf635bd",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.\\_3YWMi .error-msg",
+      "targets": [
+        ["css=.\\_3YWMi .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Please enter a valid first name."
+    }, {
+      "id": "e838c15a-1f6e-419e-b958-fea70584c448",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_3aIL6 .error-msg",
+      "targets": [
+        ["css=.\\_3aIL6 .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5d26f9a-0d6a-4a13-a460-364cf0a9cb16",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.\\_3aIL6 .error-msg",
+      "targets": [
+        ["css=.\\_3aIL6 .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Please enter a valid last name."
+    }, {
+      "id": "886ebe70-1a1c-4c39-ade3-b4c346433a17",
+      "comment": "",
+      "command": "click",
+      "target": "css=fieldset > .\\_18GWE .error-msg",
+      "targets": [
+        ["css=fieldset > .\\_18GWE .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9847e39e-d42d-42b3-8cb7-716ead0c56e7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=fieldset > .\\_18GWE .error-msg",
+      "targets": [
+        ["css=fieldset > .\\_18GWE .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "This is not a valid email address."
+    }, {
+      "id": "3ebc7e01-ce60-4fe3-a0dd-ba85f0c9dfd1",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .\\_18GWE .error-msg",
+      "targets": [
+        ["css=div:nth-child(3) > .\\_18GWE .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a27834e9-0449-4e87-be32-19deaae2c8c7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=div:nth-child(3) > .\\_18GWE .error-msg",
+      "targets": [
+        ["css=div:nth-child(3) > .\\_18GWE .error-msg", "css:finder"],
+        ["xpath=//form[@id='createAccount']/fieldset/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Please review the password requirements."
+    }, {
+      "id": "64c274ff-5d26-4e9b-9753-2c766515e2bb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='createAccount']/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "92b74dde-ed35-43af-be40-7a496afec4c6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "73213a75-6680-4078-9f30-bbdc445d4876",
+    "name": "RegisterTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5c581437-55e9-4d6e-b600-a95ad96a940e", "a3cae0c1-5f2a-4d40-9df7-56b1a7274223", "05b14635-ee4d-43ee-8d30-fc8bcbba2934", "58eb1958-0194-414d-b547-81985c3e1954"]
+  }, {
+    "id": "7b497f5f-0847-4c03-aea1-2bc2bafe35ca",
+    "name": "SearchTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["376a3f4e-df9f-438d-b084-f3b001ed374b", "7a582510-86ee-4c2f-ac36-3745d006b303", "61c11f06-c600-4a92-b253-2b8b871ed38b", "d9c9bb2e-388a-404e-98e6-246fad472003"]
+  }],
+  "urls": ["https://www.bestbuy.ca/"],
+  "plugins": []
+}

@@ -427,7 +427,8 @@ These tests all passed, suggesting that there are no defects for the registratio
 user is already logged in before any of these tests run, these test cases will not work. <br />
 
 ## Functionality 2. login 
-In this test, we tested the login of an account on the BestBuy website. There were 3 test cases for this. 
+**NOTE: Each of these tests must be ran individually, and ensured that on bestbuy.ca that the user is logged out before running the next test
+In this test, we tested the login of an account on the BestBuy website. There were 3 test cases for this, located in the SIDE file testcase27.side
 
 `test2valid`
 **ENSURE YOU ARE LOGGED OUT BEFORE TEST CASE**
@@ -525,7 +526,9 @@ This functionality is tested in `TopDealsTest.java`. The item to be found was th
 It is important to note that top deals will likely change frequently and these test cases may be obsolete by the time they are ready to be ran again. This is unfortunate and requires a lot of work to maintain. For this lab, the cases will be maintained until handed in. <br />
 
 ## Functionality 7. add product to shopping cart, then view cart
-In this, we wanted to test that we can add products to the cart before paying, and also view the shopping cart. 
+**Note: each test below must be ran INDIVIDUALLY and ensured that the shopping cart is cleared on bestbuy.ca before running the next test!
+In this, we wanted to test that we can add products to the cart before paying, and also view the shopping cart. All of these test cases are located in the side file
+testcase27.side (as well as functionality2)
 
 `test7valid`
 **ENSURE CART IS EMPTY ON FIREFOX BEFORE RUNNING TEST**

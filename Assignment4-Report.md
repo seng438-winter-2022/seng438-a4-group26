@@ -113,7 +113,7 @@ a central value, but instead you get a summation of the bounds.
 # Report all the statistics and the mutation score for each test class
 
 ## DataUtilites test classes
-
+Note that the mutation tool must be ran with the updated DataUtilities within this github repo (due to changes to DataUtilities.java)
 ### `DataUtilitiesCalculateColumnTotalArrayTest`
 Originally this test class had a mutation score of 83.51% which became 92.31%. This corrected by adding new test cases and by modifying the original `testCCTANullData` to properly catch null data being passed. New test cases were:
 

@@ -355,6 +355,11 @@ than the tool reports.
 
 Additionally, some other mutations cannot be detected by test cases such as the post incrementation of a returned value which will not affect production code, nor will it be caught. Due to cases like this, mutation score may be a less accurate. 
 
+In regards to a detection strategy, the only way to find these equivalent mutants is to manually look through surviving mutants and to check if they have an effect
+on the semantics of the method. If they don't (i.e. the mutation doesn't actually change the return of the method or does something that is unobservable to the test
+case), then it is identified as an equivalent mutant. For example, a method where the test case expects a return of true may still return true when there is a 
+mutation, but the semantics of the method are unchanged and thus undetected by the test suite.
+
 With mutation cases that are equivalent or unreachable or even do not change anything, the mutation score will be a little less accurate of a reflection of the accuracy of test cases. It will also make it difficult to eliminate all mutants and achieve a score of 100% for any class. However, since all classes will likely have some of these unfixable mutants, the score is evenly affected for all test classes and we can simply lower our threshhold from 100% to accurately reflect the quality of tests.
 
 # A discussion of what could have been done to improve the mutation score of the test suites

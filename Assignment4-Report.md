@@ -389,7 +389,7 @@ Checkpoints and assertions are vital in GUI testing. Checkpoints catch early tes
 # How did you test each functionaity with different test data
 
 ## Functionality 1. Register a new account
-This functionality was tested using four different test cases. <br />
+This functionality was tested using four different test cases within the script/side file best_buy_github.side. <br />
 <br />
 **NOTE: the following test cases only work if no one is already logged in to bestbuy.ca previously**
 <br />
@@ -456,7 +456,7 @@ The checkpoints are:
 (4) verify text displaying "Sorry, the e-mail address and password you entered don’t match. Please try again." is present
 
 ## Functionality 3. Find a product through search
-This functionality was tested in the test suite `SearchTests` and has 4 test cases: `SearchIPadPro11`, 
+This functionality was tested in the test suite SIDE file best_buy_github.side (as well as functionality 1) and has 4 test cases: `SearchIPadPro11`, 
 `testSearchwithAutoFill`, `findIPhoneWithFilters`, and `testSequentialSearch`. <br />
 `SearchIPadPro11` searches for an IPad Pro 11 and then selects an IPad Pro 11 from the search results. The verification
 checkpoints are: verify the title of the home page, verify search bar is editable, verify new title after search is
